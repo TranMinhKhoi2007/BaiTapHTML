@@ -6,25 +6,29 @@
         <title>Tạo form và các điều khiển</title>
     </head>
     <body>
-        <form method="post">
-            <table align="center" style="background-color: rgb(245, 245, 178); border-collapse: collapse; color: rgb(61, 52, 224);" border="2px">
+        <form method="post" id="myForm" name="myForm">
+            <table align="center"
+                style="background-color: rgb(245, 245, 178); border-collapse: collapse; color: rgb(61, 52, 224); font-weight: bold;"
+                border="2px">
                 <tr>
-                    <td colspan="2" style="color: rgb(61, 52, 224); background-color: white ; font-size: 30px;font-weight:bold;" align="center">Đăng ký
+                    <td colspan="2"
+                        style="color: rgb(61, 52, 224); background-color: white ; font-size: 30px;font-weight:bold;"
+                        align="center">Đăng ký
                         du lịch</td>
                 </tr>
                 <tr>
                     <td><label for="name">Họ và tên</label></td>
-                    <td><input type="text" id="name"></td>
+                    <td><input type="text" id="name" required></td>
                 </tr>
 
                 <tr>
                     <td><label for="location">Địa chỉ</label></td>
-                    <td><input type="text" id="location"></td>
+                    <td><input type="text" id="location" required></td>
                 </tr>
 
                 <tr>
                     <td><label for="phone">Điện thoại</label></td>
-                    <td><input type="text" id="phone"></td>
+                    <td><input type="text" id="phone" required></td>
                 </tr>
 
                 <tr>
@@ -56,9 +60,9 @@
                 <tr>
                     <td>Phương tiện</td>
                     <td>
-                        <input type="radio" name="vehicle" id="plane">
+                        <input type="radio" name="vehicle" id="plane" required>
                         <label for="plane">Máy bay</label>
-                        <input type="radio" name="vehicle" id="car">
+                        <input type="radio" name="vehicle" id="car" required>
                         <label for="car">Xe ô tô</label>
                     </td>
                 </tr>
@@ -66,11 +70,13 @@
                 <tr>
                     <td colspan="2">
                         <fieldset>
-                            <legend>Số lượng đoàn khách</legend>
+                            <legend
+                                style="color: rgb(243, 45, 64); font-style: italic;">Số
+                                lượng đoàn khách</legend>
                             <label for="adult">Người lớn</label>
-                            <input type="number" id="adult">
+                            <input type="number" id="adult" required>
                             <label for="children">Trẻ em</label>
-                            <input type="number" id="children">
+                            <input type="number" id="children" required>
                         </fieldset>
                     </td>
                 </tr>
@@ -82,7 +88,8 @@
                 </tr>
 
                 <tr align="center">
-                    <td colspan="2"><input type="button" value="Đồng ý" onclick="xacNhanDangKy()"></td>
+                    <td colspan="2"><input type="button" value="Đồng ý"
+                            onclick="xacNhanDangKy()"></td>
                 </tr>
                 <tr>
                     <td colspan="2" style="color:red; font-weight: bold;"
@@ -93,7 +100,10 @@
         <script>
             function xacNhanDangKy()
             {
-                document.getElementById("thong-bao").innerText ="Bạn đã đăng ký thành công!!!"
+                let form = document.getElementById("myForm");
+                if(form.reportValidity()){
+                    document.getElementById("thong-bao").innerText ="Bạn đã đăng ký thành công!!!";
+                }
             }
         </script>
     </body>

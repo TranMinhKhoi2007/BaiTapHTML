@@ -6,7 +6,7 @@
         <title>Tạo form và các điều khiển</title>
     </head>
     <body>
-        <form method="post">
+        <form method="post" id="myForm"">
             <table align="center"
                 style="background-color: rgb(163, 232, 163);border-collapse: collapse; "
                 border="2px solid">
@@ -21,18 +21,18 @@
                 </tr>
                 <tr>
                     <td><label for="location">Địa chỉ</label></td>
-                    <td><input type="text" id="location"></td>
+                    <td><input type="text" id="location" required></td>
                 </tr>
                 <tr>
                     <td><label for="phone">Điện thoại</label></td>
-                    <td><input type="tel" id="phone"></td>
+                    <td><input type="tel" id="phone" required></td>
                 </tr>
                 <tr>
                     <td>Phái</td>
                     <td>
-                        <input type="radio" name="sex" id="male">
+                        <input type="radio" name="sex" id="male" required> 
                         <label for="male">Nam</label>
-                        <input type="radio" name="sex" id="female"><label
+                        <input type="radio" name="sex" id="female" required><label
                             for="female">Nữ</label>
                     </td>
                 </tr>
@@ -51,7 +51,7 @@
                 <tr>
                     <td><label for="product">Chọn sản phẩm tham gia</label></td>
                     <td>
-                        <select name="Product" id="product" multiple>
+                        <select name="Product" id="product" multiple required>
                             <option value="Kem đánh răng">Kem đánh răng</option>
                             <option value="Bột giặt">Bột giặt</option>
                             <option value="Dầu gội đầu">Dầu gội đầu
@@ -64,7 +64,7 @@
                 <tr>
                     <td><label for="people">Số người dự đoán tham
                             gia</label></td>
-                    <td><input type="number" id="people"></td>
+                    <td><input type="number" id="people" required></td>
                 </tr>
 
                 <tr align="center">
@@ -78,7 +78,10 @@
         <script>
             function xacNhanDangKy()
             {
-                document.getElementById("thong-bao").innerText ="Bạn đã đăng ký thành công!!!"
+                let form = document.getElementById("myForm");
+                if(form.reportValidity()){
+                    document.getElementById("thong-bao").innerText ="Bạn đã đăng ký thành công!!!"
+                }
             }
         </script>
     </body>
