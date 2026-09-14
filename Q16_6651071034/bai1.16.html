@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập tổng hợp</title>
+    <style>
+        * { box-sizing: border-box; }
+        body { margin: 0; padding: 16px; font-family: "Times New Roman", serif; font-size: 18px; }
+        table { width: 800px; max-width: 100%; margin: 0 auto; border-collapse: collapse; table-layout: fixed; }
+        td { border: 1px solid #888; }
+        .header { height: 120px; color: #3835e3; font-weight: bold; vertical-align: middle; }
+        .header img { vertical-align: middle; }
+        .header .question { float: right; margin: 10px; }
+        .header .large { font-size: 60px; }
+        .header .medium { font-size: 45px; }
+        .header .small { font-size: 30px; }
+        .menu { width: 200px; vertical-align: top; padding: 8px 12px; }
+        .menu li { margin: 10px 0; }
+        .section { padding: 1px 4px; background: #3835e3; color: white; font-weight: bold; }
+        .article { padding: 2px 4px 6px; overflow: hidden; }
+        .article h3 { margin: 0 0 2px; color: #3835e3; font-size: 18px; }
+        .article img { float: left; display: block; width: 105px; height: 100px; margin: 0 6px 2px 0; object-fit: cover; }
+        .article p { margin: 0; }
+        .article ul { margin: 4px 0 4px 22px; }
+        .back { display: inline-block; margin-top: 3px; background: #b9b9b9; }
+        .right-image img { float: right; margin: 0 0 2px 8px; }
+        @media (max-width: 600px) { body { padding: 4px; font-size: 16px; } .menu { width: 145px; } }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td colspan="2" id="dauTrang" class="header">
+                <img src="img/love-icon-symbol-valentine-day-260nw-1637838955.webp" height="100" alt="Tình yêu">
+                <span class="large">Ai?</span> <span class="medium">Cái gì?</span> <span class="small">Ở đâu? ...</span>
+                <img class="question" src="img/question.jpg" height="90" alt="Dấu hỏi">
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="15" class="menu">
+                <ul type="circle">
+                    <li><a href="#loveAndfamily">Tình yêu và gia đình</a></li>
+                    <li><a href="#health">Sức khỏe</a></li>
+                    <li><a href="#travel">Du lịch</a></li>
+                    <li><a href="#cuisine">Ẩm thực</a></li>
+                    <li><a href="#music">Âm nhạc</a></li>
+                </ul>
+            </td>
+            <td id="loveAndfamily" class="section">Tình yêu và gia đình</td>
+        </tr>
+        <tr><td class="article"><h3>Trầu cau</h3><img src="img/trauCau.jpg" alt="Trầu cau"><p>Tình yêu là gì? Là ta yêu một người mỗi ngày trong một năm. Mỗi năm trong một đời người...</p></td></tr>
+        <tr><td class="article"><h3>Xây dựng hạnh phúc gia đình qua những bữa cơm hằng ngày</h3><img src="img/food.jpg" alt="Bữa cơm gia đình"><p>Nói đến hạnh phúc gia đình chúng ta thường mô tả bằng những từ thật đẹp đẽ và được thể hiện qua những giá trị đạo đức rất đáng trân trọng như tình yêu, lòng chung thủy, tình nghĩa vợ chồng, lòng yêu thương, hy sinh cho con cái, sự quý trọng, hiếu để của con cháu với cha mẹ, ông bà...</p></td></tr>
+        <tr><td id="health" class="section">Sức khỏe</td></tr>
+        <tr><td class="article"><h3>10 lời khuyên trong dinh dưỡng</h3><img src="img/tomato.jpg" alt="Dinh dưỡng"><p>Cơ thể chúng ta cần nhiều chất dinh dưỡng từ nhiều nguồn lương thực khác nhau. Vì vậy chúng ta nên thay đổi các loại lương thực khác nhau. Chúng ta không cần kiêng chi cả - quan trọng là chú ý đến số lượng...</p></td></tr>
+        <tr><td class="article"><h3>Làm sao để bỏ thuốc lá?</h3><img src="img/noSmoke.jpg" alt="Không hút thuốc"><p>Sức khoẻ của chính bạn. Không hút thuốc lá tức là giảm thiểu đáng kể rủi ro mắc các loại bệnh ung thư và sức khoẻ sẽ tăng lên đáng kể so với khi còn hút thuốc.</p><a class="back" href="#dauTrang">Về đầu trang</a></td></tr>
+        <tr><td id="travel" class="section">Du lịch</td></tr>
+        <tr><td class="article"><h3>Các tour mới nhất</h3><ul><li>Côn Minh - Đại Lý - Lệ Giang</li><li>Đến Macau xem casino</li><li>Về Cà Mau ăn tôm tít</li></ul></td></tr>
+        <tr><td class="article"><h3>Các điểm du lịch nổi tiếng thế giới</h3><ul><li>Đảo Bali xinh đẹp - Indonexia</li><li>Thành cổ Rome và tháp nghiêng Pisa</li><li>Vạn Lý Trường Thành</li></ul><a class="back" href="#dauTrang">Về đầu trang</a></td></tr>
+        <tr><td id="cuisine" class="section">Ẩm thực</td></tr>
+        <tr><td class="article right-image"><img src="img/lau.jpg" alt="Lẩu"><ul type="square"><li>Các món ăn mới trong tuần</li><li>Chuyên mục dạy nấu ăn</li><li>Món ngon Hà Nội</li><li>Các món ăn dân dã ở miền Tây</li></ul></td></tr>
+        <tr><td id="music" class="section">Âm nhạc</td></tr>
+        <tr><td class="article right-image"><h3>Nhạc thiếu nhi</h3><img src="img/trump.jpg" alt="Nhạc thiếu nhi"><ul><li>Nắng sân trường</li><li>Mẹ yêu không nào</li><li>Ba bà đi bán lợn con</li></ul></td></tr>
+        <tr><td class="section">Dân ca</td></tr>
+        <tr><td class="article right-image"><h3>Nhạc thiếu nhi</h3><img src="img/music.jpg" alt="Dân ca"><ul><li>Bèo dạt mây trôi</li><li>Mười thương</li><li>Lý cây bông</li></ul><a class="back" href="#dauTrang">Về đầu trang</a></td></tr>
+    </table>
+</body>
+</html>
