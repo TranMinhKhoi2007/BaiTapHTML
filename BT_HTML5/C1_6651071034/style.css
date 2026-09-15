@@ -1,0 +1,137 @@
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    color: #243235;
+    font: 14px/1.45 Arial, Helvetica, sans-serif;
+    background: #eef9fb;
+}
+
+header, nav, main {
+    width: min(860px, calc(100% - 32px));
+    margin-inline: auto;
+}
+
+header {
+    position: relative;
+    height: 150px;
+    padding: 34px;
+    overflow: hidden;
+    color: #fff;
+    background:
+        radial-gradient(ellipse 65% 70% at 95% 88%, #ff9b55 0 28%, transparent 29%),
+        radial-gradient(ellipse 65% 85% at 68% 10%, #56c5c4 0 30%, transparent 31%),
+        linear-gradient(135deg, #00787e, #09969c 58%, #68c9c9);
+    box-shadow: 0 8px 15px rgba(0, 54, 60, .18);
+}
+
+header::before, header::after {
+    position: absolute;
+    z-index: 0;
+    content: "";
+    border: 30px solid;
+    border-radius: 50%;
+    opacity: .35;
+    transform: rotate(12deg);
+}
+header::before { width: 510px; height: 155px; top: -72px; left: 120px; border-color: #75d0cf; }
+header::after { width: 470px; height: 110px; right: -120px; bottom: -88px; border-color: #f78c50; }
+
+hgroup { position: relative; z-index: 1; margin: 0; }
+h1, h2, p { margin-top: 0; }
+h1 { margin-bottom: 2px; font-size: clamp(22px, 4vw, 30px); font-weight: 800; letter-spacing: .2px; text-transform: uppercase; }
+header h2 { margin: 0; font-size: 15px; font-weight: 400; }
+
+.avatar {
+    position: absolute;
+    z-index: 2;
+    right: 31px;
+    bottom: 12px;
+    width: 112px;
+    height: 112px;
+    overflow: hidden;
+    border: 4px solid #f5f8f8;
+    border-radius: 50%;
+    background: #dfe8ed;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, .22);
+}
+/* Hình đại diện cách điệu bằng CSS, không cần tệp ảnh riêng. */
+.avatar::before {
+    position: absolute; top: 20px; left: 34px; width: 37px; height: 43px; content: "";
+    border-radius: 48% 48% 43% 43%; background: #f1b081; box-shadow: 0 -12px 0 5px #51382f;
+}
+.avatar::after {
+    position: absolute; bottom: -16px; left: 16px; width: 75px; height: 68px; content: "";
+    border-radius: 50% 50% 0 0; background: #1e5b7a;
+}
+
+nav {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    gap: 8px;
+    height: 42px;
+    margin-top: -20px;
+    padding: 7px 32px;
+    align-items: center;
+    border-radius: 0 0 14px 14px;
+    background: #fff;
+    box-shadow: 0 7px 12px rgba(0, 0, 0, .15);
+}
+nav a {
+    display: inline-block;
+    padding: 5px 13px;
+    color: #263335;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 14px;
+    transition: transform .15s ease, filter .15s ease;
+}
+nav a:nth-child(1) { background: #bcebe8; }
+nav a:nth-child(2) { background: #ffe1af; }
+nav a:nth-child(3) { background: #ead6e5; }
+nav a:hover, nav a:focus-visible { filter: brightness(.95); transform: translateY(-1px); outline: 2px solid #097e83; outline-offset: 2px; }
+
+main {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr .83fr;
+    gap: 31px;
+    padding: 42px 2px 38px;
+}
+main h2 { margin-bottom: 8px; color: #121a1c; font-size: 21px; line-height: 1.1; }
+
+#gioithieu { padding: 14px 14px 6px; border-radius: 12px; background: #fff; box-shadow: 0 4px 9px rgba(0, 0, 0, .18); }
+#gioithieu h2 { margin: -38px 0 16px -14px; }
+#gioithieu p { margin-bottom: 14px; }
+
+#kynang ul { margin: 0; padding: 1px 0 0; list-style: none; }
+#kynang li { position: relative; margin: 0 0 10px; padding-left: 22px; }
+#kynang li::before {
+    position: absolute; top: 2px; left: 0; display: grid; width: 14px; height: 14px; place-items: center;
+    content: "✓"; color: #fff; font-size: 10px; font-weight: 700; line-height: 1; border-radius: 50%; background: #148e90;
+}
+
+#lienhe address { padding: 15px 16px 10px; font-style: normal; border-radius: 12px; background: #fff; box-shadow: 0 4px 9px rgba(0, 0, 0, .18); }
+#lienhe address::before { display: block; margin-bottom: 6px; content: "Address"; color: #1c2526; font-weight: 700; }
+#lienhe p { position: relative; margin: 0 0 8px; padding-left: 25px; }
+#lienhe p::before { position: absolute; top: 0; left: 0; color: #16898d; font-size: 17px; line-height: 1; }
+#lienhe p:first-child::before { content: "✉"; }
+#lienhe p:last-child::before { content: "☎"; }
+
+footer { padding: 14px 16px 8px; text-align: center; font-size: 12px; background: #a8d4ee; }
+footer p { margin-bottom: 6px; }
+footer::after { content: "⌁ Học Viện Công Nghệ"; color: #3a6278; font-size: 10px; }
+
+@media (max-width: 650px) {
+    header { height: 138px; padding: 29px 24px; }
+    .avatar { right: 18px; width: 94px; height: 94px; }
+    nav { padding-inline: 15px; }
+    nav a { padding-inline: 9px; font-size: 10px; }
+    main { grid-template-columns: 1fr; gap: 36px; padding-top: 42px; }
+    #gioithieu h2 { margin-top: -38px; }
+}

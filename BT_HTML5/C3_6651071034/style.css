@@ -1,0 +1,331 @@
+/* CSS Reset & Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #ffffff;
+    color: #111111;
+    line-height: 1.5;
+}
+
+/* Header Styles */
+header {
+    background-color: #85c3b6;
+    padding: 15px 50px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+header img {
+    width: 200px;
+    height: 60px;
+    object-fit: contain;
+}
+
+header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #000000;
+    letter-spacing: -0.3px;
+}
+
+/* Main Layout Grid */
+main {
+    max-width: 1160px;
+    margin: 25px auto 40px auto;
+    padding: 0 30px;
+    display: grid;
+    grid-template-columns: 1fr 270px;
+    gap: 10px 40px;
+}
+
+/* Section 1: Product Information */
+main > section:nth-of-type(1) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    grid-template-rows: auto auto auto auto;
+    column-gap: 30px;
+}
+
+/* Heading: Thông tin sản phẩm */
+main > section:nth-of-type(1) > h2:nth-of-type(1) {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    font-size: 24px;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 25px;
+}
+
+/* Main Product Image (S24 Ultra) */
+main > section:nth-of-type(1) > img {
+    grid-column: 1 / 2;
+    grid-row: 2 / 5;
+    width: 360px;
+    height: 360px;
+    object-fit: contain;
+}
+
+/* Heading: Samsung Galaxy S24 Ultra */
+main > section:nth-of-type(1) > h2:nth-of-type(2) {
+    grid-column: 2 / 3;
+    grid-row: 2;
+    font-size: 22px;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 12px;
+}
+
+/* Product Description Paragraph */
+main > section:nth-of-type(1) > p {
+    grid-column: 2 / 3;
+    grid-row: 3;
+    font-size: 13.5px;
+    line-height: 1.45;
+    color: #333333;
+    margin-bottom: 22px;
+    max-width: 440px;
+}
+
+/* Technical Specifications Table */
+main > section:nth-of-type(1) > table {
+    grid-column: 2 / 3;
+    grid-row: 4;
+    width: 100%;
+    max-width: 440px;
+    border-collapse: collapse;
+    border: 1px solid #c5d8e2;
+    font-size: 13.5px;
+}
+
+table caption {
+    caption-side: top;
+    font-size: 14px;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+table caption::before {
+    content: "<caption >";
+    font-family: monospace, Courier, monospace;
+    font-size: 13px;
+    font-weight: 400;
+    color: #555555;
+}
+
+table th, table td {
+    padding: 7px 14px;
+    text-align: left;
+    border: 1px solid #d0dce3;
+}
+
+table thead th {
+    background-color: #bfe3f0;
+    color: #000000;
+    font-weight: 700;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f4f8fa;
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+table tbody th[scope="row"] {
+    font-weight: 400;
+    color: #111111;
+    width: 32%;
+}
+
+/* Aside: Purchase Policy */
+main > aside {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    margin-top: 52px;
+    border: 1.5px solid #49776f;
+    border-radius: 12px;
+    padding: 18px 20px;
+    background-color: #ffffff;
+    align-self: start;
+}
+
+aside h3 {
+    font-size: 17px;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 14px;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+aside ul li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13.5px;
+    color: #222222;
+    margin-bottom: 10px;
+}
+
+aside ul li:nth-child(1)::before {
+    content: "🛡️";
+    font-size: 13px;
+}
+
+aside ul li:nth-child(2)::before {
+    content: "🔄";
+    font-size: 13px;
+}
+
+aside ul li:nth-child(3)::before {
+    content: "🚚";
+    font-size: 13px;
+}
+
+aside ul li:nth-child(3)::after {
+    content: " (toàn quốc)";
+}
+
+/* Section 2: Similar Products */
+main > section:nth-of-type(2) {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+    margin-top: 35px;
+}
+
+main > section:nth-of-type(2) > h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 18px;
+}
+
+main > section:nth-of-type(2) > ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+main > section:nth-of-type(2) > ol > li {
+    border: 1px solid #d0d0d0;
+    border-radius: 16px;
+    padding: 10px 18px;
+    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: 42px 1fr;
+    grid-template-rows: auto auto;
+    column-gap: 12px;
+    align-items: center;
+    width: 220px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #000000;
+}
+
+/* Card 1: iPhone 15 Pro */
+main > section:nth-of-type(2) > ol > li:nth-child(1)::before {
+    content: "";
+    grid-column: 1;
+    grid-row: 1 / 3;
+    width: 42px;
+    height: 42px;
+    background: url('iphone15.jpg') center/cover no-repeat;
+    border-radius: 6px;
+}
+main > section:nth-of-type(2) > ol > li:nth-child(1)::after {
+    content: "159.000 VNĐ";
+    grid-column: 2;
+    grid-row: 2;
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #000000;
+    margin-top: 2px;
+}
+
+/* Card 2: Xiaomi 14 Pro */
+main > section:nth-of-type(2) > ol > li:nth-child(2)::before {
+    content: "";
+    grid-column: 1;
+    grid-row: 1 / 3;
+    width: 42px;
+    height: 42px;
+    background: url('xiaomi14.jpg') center/cover no-repeat;
+    border-radius: 6px;
+}
+main > section:nth-of-type(2) > ol > li:nth-child(2)::after {
+    content: "163.000 VNĐ";
+    grid-column: 2;
+    grid-row: 2;
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #000000;
+    margin-top: 2px;
+}
+
+/* Card 3: Galaxy Z Fold5 */
+main > section:nth-of-type(2) > ol > li:nth-child(3)::before {
+    content: "";
+    grid-column: 1;
+    grid-row: 1 / 3;
+    width: 42px;
+    height: 42px;
+    background: url('zfold5.jpg') center/cover no-repeat;
+    border-radius: 6px;
+}
+main > section:nth-of-type(2) > ol > li:nth-child(3)::after {
+    content: "199.000 VNĐ";
+    grid-column: 2;
+    grid-row: 2;
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #000000;
+    margin-top: 2px;
+}
+
+/* Footer */
+footer {
+    background-color: #0d4049;
+    color: #ffffff;
+    padding: 16px 40px 12px 40px;
+    margin-top: 40px;
+}
+
+address {
+    font-style: normal;
+    font-size: 0;
+}
+
+address::before {
+    content: "Liên hệ\A 📍  Địd chu: Nga, Số 70, Thân, viên Shop               📞 087.33.8 733       ✉️ email@gmail.com       🌐 website.com";
+    white-space: pre-wrap;
+    display: block;
+    font-size: 13.5px;
+    color: #ffffff;
+    line-height: 1.8;
+}
+
+address::after {
+    content: "Copyright © 2022 Điện tử ABC";
+    display: block;
+    text-align: center;
+    font-size: 13px;
+    color: #ffffff;
+    margin-top: 6px;
+}
