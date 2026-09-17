@@ -58,14 +58,12 @@ header h2 { margin: 0; font-size: 15px; font-weight: 400; }
     background: #dfe8ed;
     box-shadow: 0 4px 6px rgba(0, 0, 0, .22);
 }
-/* Hình đại diện cách điệu bằng CSS, không cần tệp ảnh riêng. */
-.avatar::before {
-    position: absolute; top: 20px; left: 34px; width: 37px; height: 43px; content: "";
-    border-radius: 48% 48% 43% 43%; background: #f1b081; box-shadow: 0 -12px 0 5px #51382f;
-}
-.avatar::after {
-    position: absolute; bottom: -16px; left: 16px; width: 75px; height: 68px; content: "";
-    border-radius: 50% 50% 0 0; background: #1e5b7a;
+.avatar img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 nav {

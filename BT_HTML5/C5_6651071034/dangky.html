@@ -1,39 +1,88 @@
 <!DOCTYPE html>
 <html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng ký tài khoản mới</title>
-    <link rel="stylesheet" href="dangky.css">
-</head>
-<body>
-    <main>
-        <form action="xu_ly_dangky.php" method="post" enctype="multipart/form-data" name="formDangKy" id="formDangKy">
-            <h1>Đăng ký tài khoản mới</h1>
-            <fieldset>
-                <legend>Thông tin cơ bản</legend>
-                <div class="form-row"><label for="hoten">Họ và tên:</label><input type="text" name="hoten" id="hoten" value="Nguyễn Văn An" required maxlength="100"></div>
-                <div class="form-row"><label for="email">Email:</label><input type="email" name="email" id="email" value="example@gmail.com" required></div>
-                <div class="form-row"><label for="matkhau">Mật khẩu:</label><input type="password" name="matkhau" id="matkhau" value="12345678" required minlength="8"></div>
-                <div class="form-row"><label for="sdt">Số điện thoại:</label><input type="tel" name="sdt" id="sdt" pattern="[0-9]{10}" value="0901234567"></div>
-            </fieldset>
-            <fieldset>
-                <legend>Thông tin cá nhân</legend>
-                <div class="form-row"><label for="tuoi">Tuổi:</label><input type="number" name="tuoi" id="tuoi" min="16" max="99" step="1" value="18"></div>
-                <div class="form-row"><label for="ngaysinh">Ngày sinh:</label><input type="date" name="ngaysinh" id="ngaysinh" min="1950-01-01" max="2010-12-31" value="2005-01-01"></div>
-                <div class="form-row"><span>Giới tính:</span><div class="options"><label><input type="radio" name="gioitinh" value="nam"> Nam</label><label><input type="radio" name="gioitinh" value="nu" checked> Nữ</label><label><input type="radio" name="gioitinh" value="khac"> Khác</label></div></div>
-                <div class="form-row"><label for="mauua">Màu yêu thích:</label><input type="color" name="mauua" id="mauua" value="#ff6b6b"></div>
-            </fieldset>
-            <fieldset>
-                <legend>Sở thích &amp; Cài đặt</legend>
-                <div class="form-row"><label for="soikim">Tìm kiếm sở thích:</label><input type="search" name="soikim" id="soikim" placeholder="Ví dụ: đọc sách, chơi game..."></div>
-                <div class="form-row"><label for="chitieu">Mức chi tiêu/tháng (VNĐ):</label><div class="range-control"><output for="chitieu">5.000.000</output><input type="range" name="chitieu" id="chitieu" min="0" max="50000000" step="500000" value="5000000"></div></div>
-                <div class="form-row"><span>Sở thích (chọn nhiều):</span><div class="options"><label><input type="checkbox" name="sothich" value="doc-sach" checked> Đọc sách</label><label><input type="checkbox" name="sothich" value="choi-game"> Chơi game</label><label><input type="checkbox" name="sothich" value="du-lich" checked> Du lịch</label></div></div>
-                <div class="form-row"><label for="website">Website cá nhân:</label><input type="url" name="website" id="website" value="https://example.com"></div>
-                <div class="form-row"><label for="anhdaidien">Ảnh đại diện:</label><input type="file" name="anhdaidien" id="anhdaidien" accept="image/*"></div>
-            </fieldset>
-            <div class="actions"><button type="submit">Đăng ký ngay</button><button type="reset">Nhập lại</button></div>
-        </form>
-    </main>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Đăng ký tài khoản mới</title>
+        <link rel="stylesheet" href="dangky.css">
+    </head>
+    <body>
+        <main>
+            <form action="xu_ly_dangky.php" method="post"
+                enctype="multipart/form-data" name="formDangKy" id="formDangKy">
+                <h1>Đăng ký tài khoản mới</h1>
+                <fieldset>
+                    <legend>Thông tin cơ bản</legend>
+                    <div class="form-row"><label for="hoten">Họ và
+                            tên:</label><input type="text" name="hoten"
+                            id="hoten" value="Nguyễn Văn An" required
+                            maxlength="100"></div>
+                    <div class="form-row"><label
+                            for="email">Email:</label><input type="email"
+                            name="email" id="email" value="example@gmail.com"
+                            required></div>
+                    <div class="form-row"><label for="matkhau">Mật
+                            khẩu:</label><input type="password" name="matkhau"
+                            id="matkhau" value="12345678" required
+                            minlength="8"></div>
+                    <div class="form-row"><label for="sdt">Số điện
+                            thoại:</label><input type="tel" name="sdt" id="sdt"
+                            pattern="[0-9]{10}" value="0901234567"></div>
+                </fieldset>
+                <fieldset>
+                    <legend>Thông tin cá nhân</legend>
+                    <div class="form-row"><label for="tuoi">Tuổi:</label><input
+                            type="number" name="tuoi" id="tuoi" min="16"
+                            max="99" step="1" value="18"></div>
+                    <div class="form-row"><label for="ngaysinh">Ngày
+                            sinh:</label><input type="date" name="ngaysinh"
+                            id="ngaysinh" min="1950-01-01" max="2010-12-31"
+                            value="2005-01-01"></div>
+                    <div class="form-row"><span>Giới tính:</span><div
+                            class="options"><label><input type="radio"
+                                    name="gioitinh" value="nam">
+                                Nam</label><label><input type="radio"
+                                    name="gioitinh" value="nu" checked>
+                                Nữ</label><label><input type="radio"
+                                    name="gioitinh" value="khac">
+                                Khác</label></div></div>
+                    <div class="form-row"><label for="mauua">Màu yêu
+                            thích:</label><input type="color" name="mauua"
+                            id="mauua" value="#ff6b6b"></div>
+                </fieldset>
+                <fieldset>
+                    <legend>Sở thích &amp; Cài đặt</legend>
+                    <div class="form-row"><label for="soikim">Tìm kiếm sở
+                            thích:</label><input type="search" name="soikim"
+                            id="soikim"
+                            placeholder="Ví dụ: đọc sách, chơi game..."></div>
+                    <div class="form-row"><label for="chitieu">Mức chi
+                            tiêu/tháng (VNĐ):</label><div
+                            class="range-control"><output
+                                for="chitieu">5.000.000</output><input
+                                type="range" name="chitieu" id="chitieu" min="0"
+                                max="50000000" step="500000"
+                                value="5000000"></div></div>
+                    <div class="form-row"><span>Sở thích (chọn
+                            nhiều):</span><div class="options"><label><input
+                                    type="checkbox" name="sothich"
+                                    value="doc-sach" checked> Đọc
+                                sách</label><label><input type="checkbox"
+                                    name="sothich" value="choi-game"> Chơi
+                                game</label><label><input type="checkbox"
+                                    name="sothich" value="du-lich" checked> Du
+                                lịch</label></div></div>
+                    <div class="form-row"><label for="website">Website cá
+                            nhân:</label><input type="url" name="website"
+                            id="website" value="https://example.com"></div>
+                    <div class="form-row"><label for="anhdaidien">Ảnh đại
+                            diện:</label><input type="file" name="anhdaidien"
+                            id="anhdaidien" accept="image/*"></div>
+                </fieldset>
+                <div class="actions"><button type="submit">Đăng ký
+                        ngay</button><button type="reset">Nhập
+                        lại</button></div>
+            </form>
+        </main>
+    </body>
 </html>
