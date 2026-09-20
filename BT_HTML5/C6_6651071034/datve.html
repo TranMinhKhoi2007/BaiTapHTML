@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="datve.css">
+        <title>Đặt vé máy bay VietAir</title>
+    </head>
+    <body>
+        <main class="booking-card">
+            <img class="brand-logo" src="logo.png" alt="VietAir">
+
+            <form class="booking-form" action="xu_ly_ve.php" method="post">
+                <h1>Đặt vé máy bay VietAir - Kết quả Bài tập</h1>
+
+                <section>
+                    <h2>1. Thông tin chuyến bay</h2>
+                    <div class="form-grid route-grid">
+                        <div class="field">
+                            <label for="diem_di">Điểm đi:</label>
+                            <input type="text" name="diem_di" id="diem_di"
+                                list="ds_diem_di" placeholder="Vui lòng điền điểm đi">
+                            <datalist id="ds_diem_di">
+                                <option value="Hà Nội – HAN"></option>
+                                <option value="TP. Hồ Chí Minh – SGN"></option>
+                                <option value="Đà Nẵng – DAD"></option>
+                                <option value="Nha Trang – CXR"></option>
+                                <option value="Phú Quốc – PQC"></option>
+                            </datalist>
+                        </div>
+                        <div class="field">
+                            <label for="diem_den">Điểm đến:</label>
+                            <input type="text" name="diem_den" id="diem_den" list="ds_diem_den" placeholder="Vui lòng điền điểm đến">
+                            <datalist id="ds_diem_den">
+                                <option value="Hà Nội – HAN"></option>
+                                <option value="TP. Hồ Chí Minh – SGN"></option>
+                                <option value="Đà Nẵng – DAD"></option>
+                                <option value="Nha Trang – CXR"></option>
+                                <option value="Phú Quốc – PQC"></option>
+                            </datalist>
+                        </div>
+                    </div>
+                    <div class="form-grid flight-grid">
+                        <div class="field">
+                            <label for="ngay_di">Ngày đi:</label>
+                            <input type="date" name="ngay_di" id="ngay_di"
+                                value="2023-10-15" required>
+                        </div>
+                        <div class="field">
+                            <label for="ngay_ve">Ngày về:</label>
+                            <input type="date" name="ngay_ve" id="ngay_ve"
+                                value="2023-10-18" required>
+                        </div>
+                        <div class="field seat-field">
+                            <label for="hang_ghe">Hạng ghế:</label>
+                            <select name="hang_ghe" id="hang_ghe" size="3">
+                                <optgroup label="Phổ thông">
+                                    <option value="eco_basic">Phổ thông basic –
+                                        1.200.000đ</option>
+                                    <option value="eco_flex">Phổ thông flex –
+                                        1.800.000đ</option>
+                                </optgroup>
+                                <optgroup label="Thương gia">
+                                    <option value="biz">Thương gia –
+                                        4.500.000đ</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>2. Thông tin hành khách</h2>
+                    <div class="form-grid passenger-grid">
+                        <div class="field">
+                            <label for="nguoi_lon">Số hành khách người
+                                lớn:</label>
+                            <input type="number" name="nguoi_lon" id="nguoi_lon"
+                                value="2" min="1" max="9">
+                        </div>
+                        <div class="field">
+                            <label for="tre_em">Số trẻ em:</label>
+                            <input type="number" name="tre_em" id="tre_em"
+                                value="1" min="0" max="9">
+                        </div>
+                        <div class="field discount-field">
+                            <label for="ma_giam">Mã giảm giá:</label>
+                            <input type="text" name="ma_giam" id="ma_giam"
+                                list="ds_ma_giam" placeholder="Mã giảm giá">
+                            <datalist id="ds_ma_giam">
+                                <option value="SUMMER20"></option>
+                                <option value="NEWMEMBER"></option>
+                                <option value="HOLIDAY50"></option>
+                            </datalist>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="estimate">
+                    <h2>3. Kết quả ước tính</h2>
+                    <p>Tổng tiền ước tính: <strong>3.600.000 VNĐ</strong>
+                        <span>(for illustration only, matching input
+                            example).</span></p>
+                </section>
+
+                <section class="security">
+                    <h2>4. Bảo mật giao dịch</h2>
+                    <p><span class="lock" aria-hidden="true">🔒</span> Hệ thống
+                        sử tạo một cặp khóa mã hóa để bảo vệ thông tin của bạn.
+                        (Keygen has been deprecated and does not display on
+                        modern browsers; code only to structure).</p>
+                </section>
+
+                <button type="submit"><span aria-hidden="true">✈</span> Tìm
+                    chuyến bay</button>
+            </form>
+        </main>
+    </body>
+</html>

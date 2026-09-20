@@ -54,6 +54,8 @@ nav a {
 }
 nav a:nth-child(1) { color: #fff; background: #237ec0; }
 nav a:nth-child(2) { color: #fff; background: #18a482; }
+nav a:nth-child(3) { color: #fff; background: #7049f0; }
+nav a:nth-child(4) { color: #fff; background: #e52562; }
 nav a:hover, nav a:focus-visible { outline: 2px solid #117a92; outline-offset: 2px; filter: brightness(.94); }
 
 main {

@@ -8,7 +8,7 @@ body {
     padding: 40px 16px 14px;
     color: #292929;
     font: 12px/1.25 Arial, Helvetica, sans-serif;
-    background: #f0f0f0;
+    background: #787988;
 }
 
 main {
@@ -37,7 +37,7 @@ fieldset {
     padding: 6px 6px 7px;
     border: 1px solid #8eaaa9;
     border-radius: 4px;
-    background: #e9f8f8;
+    background: #8fe7e7;
 }
 
 legend {
@@ -51,6 +51,17 @@ legend {
     gap: 3px;
     min-height: 19px;
     align-items: center;
+}
+
+/* Các nhãn ở phần cài đặt dài hơn, nên cần một cột riêng rộng hơn. */
+fieldset:last-of-type .form-row {
+    grid-template-columns: 158px minmax(0, 1fr);
+    gap: 6px;
+    min-height: 22px;
+}
+
+fieldset:last-of-type .form-row + .form-row {
+    margin-top: 3px;
 }
 
 label, .form-row>span {
@@ -112,14 +123,18 @@ input[type="radio"], input[type="checkbox"] {
 }
 
 output {
-    min-width: 48px;
+    flex: 0 0 auto;
+    min-width: 69px;
     padding: 1px 3px;
     border: 1px solid #aaa;
     background: #fff;
+    white-space: nowrap;
 }
 
 input[type="range"] {
-    width: 100%;
+    flex: 1 1 0;
+    min-width: 0;
+    width: auto;
     height: 14px;
     margin: 0;
     accent-color: #168fe0;
@@ -157,6 +172,11 @@ button:hover {
 
     .form-row {
         grid-template-columns: 100px minmax(0, 1fr);
+    }
+
+    fieldset:last-of-type .form-row {
+        grid-template-columns: 1fr;
+        gap: 2px;
     }
 
     .options {
