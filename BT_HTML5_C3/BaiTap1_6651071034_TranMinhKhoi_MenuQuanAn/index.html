@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THE COZY BEAN - Coffee &amp; Bakery</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ==================== HEADER & HERO ==================== -->
+  <header class="hero-section">
+    <!-- Ambient glow & decorative background elements -->
+    <div class="hero-glow-1"></div>
+    <div class="hero-glow-2"></div>
+    <div class="hero-arc-decor"></div>
+
+    <!-- Top Navigation -->
+    <div class="hero-topbar">
+      <div class="brand">
+        <div class="brand-logo">
+          <img src="img/logo.png" alt="The Cozy Bean Logo" class="logo-img">
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">THE COZY BEAN<sup>&reg;</sup></span>
+          <span class="brand-subtitle">COFFEE &amp; BAKERY</span>
+        </div>
+      </div>
+
+      <button type="button" class="cart-btn" aria-label="Giỏ hàng">
+        <svg class="cart-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <path d="M16 10a4 4 0 0 1-8 0"></path>
+        </svg>
+        <span class="cart-text">Giỏ Hàng</span>
+        <span class="cart-badge">0</span>
+      </button>
+    </div>
+
+    <!-- Center Hero Content -->
+    <div class="hero-content">
+      <p class="hero-welcome">Welcome to</p>
+      <h1 class="hero-title">THE COZY BEAN</h1>
+      <p class="hero-tagline">“Tạo hương thơm phê quyện cùng cảm xúc, tạo nên những khoảnh khắc đặc biệt”</p>
+    </div>
+
+    <!-- Category Navigation -->
+    <nav class="category-nav" aria-label="Danh mục thực đơn">
+      <div class="category-nav-container">
+        <a href="#all" class="cat-item active">
+          <svg class="cat-icon" width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+            <rect x="3" y="3" width="7" height="7" rx="1.5"></rect>
+            <rect x="14" y="3" width="7" height="7" rx="1.5"></rect>
+            <rect x="3" y="14" width="7" height="7" rx="1.5"></rect>
+            <rect x="14" y="14" width="7" height="7" rx="1.5"></rect>
+          </svg>
+          <span>Tất Cả</span>
+        </a>
+        <a href="#coffee" class="cat-item">
+          <svg class="cat-icon" width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+            <line x1="6" y1="1" x2="6" y2="4" stroke="currentColor" stroke-width="2"></line>
+            <line x1="10" y1="1" x2="10" y2="4" stroke="currentColor" stroke-width="2"></line>
+            <line x1="14" y1="1" x2="14" y2="4" stroke="currentColor" stroke-width="2"></line>
+          </svg>
+          <span>Cà Phê &amp; Trà</span>
+        </a>
+        <a href="#bakery" class="cat-item">
+          <svg class="cat-icon" width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8"></path>
+            <path d="M4 16s.5-1 2-1 2.5 2 4 2 2.5-2 4-2 2.5 2 4 2 2-1 2-1"></path>
+            <path d="M2 21h20"></path>
+            <path d="M7 8v2"></path>
+            <path d="M12 8v2"></path>
+            <path d="M17 8v2"></path>
+          </svg>
+          <span>Bánh Ngọt</span>
+        </a>
+        <a href="#hot" class="cat-item">
+          <svg class="cat-icon" width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2c-2 3-5 5.5-5 9a5 5 0 0 0 10 0c0-3.5-3-6-5-9z"></path>
+            <path d="M12 18a2 2 0 0 0 2-2c0-1.5-1.5-2.5-2-3.5-.5 1-2 2-2 3.5a2 2 0 0 0 2 2z"></path>
+          </svg>
+          <span>Món Hot</span>
+        </a>
+        <a href="#contact" class="cat-item">
+          <svg class="cat-icon" width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          <span>Liên Hệ / Đặt Bàn</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main class="main-container">
+
+    <!-- Header Title & Filter Pills -->
+    <div class="menu-heading-area">
+      <div class="title-group">
+        <span class="sub-heading">THỰC ĐƠN CỦA CHÚNG TÔI</span>
+        <h2 class="main-heading">Khám Phá Hương Vị</h2>
+      </div>
+
+      <div class="filter-group" role="toolbar" aria-label="Bộ lọc thực đơn">
+        <button type="button" class="filter-pill active">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+            <rect x="3" y="3" width="7" height="7" rx="1.5"></rect>
+            <rect x="14" y="3" width="7" height="7" rx="1.5"></rect>
+            <rect x="3" y="14" width="7" height="7" rx="1.5"></rect>
+            <rect x="14" y="14" width="7" height="7" rx="1.5"></rect>
+          </svg>
+          <span>Tất Cả Món</span>
+        </button>
+        <button type="button" class="filter-pill">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+          </svg>
+          <span>Cà Phê</span>
+        </button>
+        <button type="button" class="filter-pill">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="#4C8B3B">
+            <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2.5 1.5 6-1.5 11.5A7 7 0 0 1 11 20z"></path>
+          </svg>
+          <span>Trà - Nước &amp; Macchiato</span>
+        </button>
+        <button type="button" class="filter-pill">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="#C96B28">
+            <path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8"></path>
+            <path d="M4 16s.5-1 2-1 2.5 2 4 2 2.5-2 4-2 2.5 2 4 2 2-1 2-1"></path>
+          </svg>
+          <span>Bánh &amp; Tráng Miệng</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="top-separator"></div>
+
+    <!-- 2 Columns Layout -->
+    <div class="layout-wrapper">
+
+      <!-- LEFT COLUMN: Product Sections -->
+      <div class="products-column">
+
+        <!-- SECTION 1: Cà Phê -->
+        <section class="catalog-section" id="coffee">
+          <div class="section-banner">
+            <span class="section-cup-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                <line x1="6" y1="2" x2="6" y2="4"></line>
+                <line x1="10" y1="2" x2="10" y2="4"></line>
+                <line x1="14" y1="2" x2="14" y2="4"></line>
+              </svg>
+            </span>
+            <h3 class="section-title">Cà Phê Truyền Thống &amp; Pha Máy</h3>
+            <div class="section-rule"></div>
+          </div>
+
+          <div class="card-grid">
+            <!-- 1. Cà Phê Muối Cozy -->
+            <article class="product-card">
+              <div class="card-thumb">
+                <img src="img/ca_phe_muoi_cozy.jpg" alt="Cà Phê Muối Cozy" loading="lazy">
+              </div>
+              <div class="card-body">
+                <h4 class="card-name">Cà Phê Muối Cozy</h4>
+                <p class="card-description">Sự kết hợp hoàn hảo giữa cà phê nguyên chất và vị mặn nhẹ, tạo nên hương vị độc đáo.</p>
+                <div class="card-bottom">
+                  <span class="card-price">39.000đ</span>
+                  <button type="button" class="order-btn">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                    <span>Đặt món</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- 2. Double Espresso -->
+            <article class="product-card">
+              <div class="card-thumb">
+                <img src="img/bac_xiu_espresso.jpg" alt="Double Espresso" loading="lazy">
+              </div>
+              <div class="card-body">
+                <h4 class="card-name">Double Espresso</h4>
+                <p class="card-description">Vị đậm đà, mạnh mẽ, tỉnh táo – lựa chọn hoàn hảo cho những ai yêu thích cà phê thật.</p>
+                <div class="card-bottom">
+                  <span class="card-price">35.000đ</span>
+                  <button type="button" class="order-btn">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                    <span>Đặt món</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- 3. Latte Hạt Dẻ Nóng -->
+            <article class="product-card">
+              <div class="card-thumb">
+                <img src="img/latte_hatde_nong.jpg" alt="Latte Hạt Dẻ Nóng" loading="lazy">
+              </div>
+              <div class="card-body">
+                <h4 class="card-name">Latte Hạt Dẻ Nóng</h4>
+                <p class="card-description">Cà phê espresso kết hợp cùng sữa nóng và hương vị hạt dẻ thơm béo, ấm áp.</p>
+                <div class="card-bottom">
+                  <span class="card-price">45.000đ</span>
+                  <button type="button" class="order-btn">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                    <span>Đặt món</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- 4. Cold Brew Cam Sả -->
+            <article class="product-card">
+              <div class="card-thumb">
+                <img src="img/coldbrew_cam_xa.jpg" alt="Cold Brew Cam Sả" loading="lazy">
+              </div>
+              <div class="card-body">
+                <h4 class="card-name">Cold Brew Cam Sả</h4>
+                <p class="card-description">Cà phê ủ lạnh kết hợp cùng cam tươi và sả, thanh mát, sảng khoái, tốt cho sức khỏe.</p>
+                <div class="card-bottom">
+                  <span class="card-price">48.000đ</span>
+                  <button type="button" class="order-btn">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                    <span>Đặt món</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- 5. Cà Phê Trứng Béo Đặc -->
+            <article class="product-card">
+              <div class="card-thumb">
+                <img src="img/cafe_trung_beo.jpg" alt="Cà Phê Trứng Béo Đặc" loading="lazy">
+              </div>
+              <div class="card-body">
+                <h4 class="card-name">Cà Phê Trứng Béo Đặc</h4>
+                <p class="card-description">Hương vị cà phê đậm đà hòa quyện cùng lớp kem trứng béo mịn, thơm ngậy.</p>
+                <div class="card-bottom">
+                  <span class="card-price">42.000đ</span>
+                  <button type="button" class="order-btn">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                    <span>Đặt món</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- 6. Americano Mật Ong -->
+            <article class="product-card">
+              <div class="card-thumb">
+                <img src="img/americano_mat_ong.jpg" alt="Americano Mật Ong" loading="lazy">
+              </div>
+              <div class="card-body">
+                <h4 class="card-name">Americano Mật Ong</h4>
+                <p class="card-description">Cà phê espresso nguyên chất kết hợp cùng vị ngọt thanh tự nhiên từ mật ong rừng thơm dịu.</p>
+                <div class="card-bottom">
+                  <span class="card-price">35.000đ</span>
+                  <button type="button" class="order-btn">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                    <span>Đặt món</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- SECTION 2: Trà Tươi & Macchiato -->
+        <section class="catalog-section" id="tea">
+          <div class="section-banner">
+            <span class="section-cup-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                <line x1="6" y1="2" x2="6" y2="4"></line>
+                <line x1="10" y1="2" x2="10" y2="4"></line>
+                <line x1="14" y1="2" x2="14" y2="4"></line>
+              </svg>
+            </span>
+            <h3 class="section-title">Trà Tươi &amp; Macchiato Thanh Mát</h3>
+            <div class="section-rule"></div>
+          </div>
+
+          <div class="card-grid">
+            <!-- 1. Trà Ô Long Quế Tằm -->
+            <article class="product-card">
+              <div class="card-thumb">
+                <img src="img/tra_olong_dau_tam.jpg" alt="Trà Ô Long Quế Tằm" loading="lazy">
+              </div>
+              <div class="card-body">
+                <h4 class="card-name">Trà Ô Long Quế Tằm</h4>
+                <p class="card-description">Trà ô long thượng hạng kết hợp cùng hương quế, tạo nên vị thanh mát, dễ chịu.</p>
+                <div class="card-bottom">
+                  <span class="card-price">42.000đ</span>
+                  <button type="button" class="order-btn">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                    <span>Đặt món</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- 2. Trà Sen Macchiato (BEST SELLER) -->
+            <article class="product-card">
+              <div class="card-thumb">
+                <span class="badge-tag badge-bestseller">BEST SELLER</span>
+                <img src="img/tra_sen_machiatto.jpg" alt="Trà Sen Macchiato" loading="lazy">
+              </div>
+              <div class="card-body">
+                <h4 class="card-name">Trà Sen Macchiato</h4>
+                <p class="card-description">Trà sen thanh tao, kết hợp cùng lớp macchiato béo mịn, thơm dịu.</p>
+                <div class="card-bottom">
+                  <span class="card-price">45.000đ</span>
+                  <button type="button" class="order-btn">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                    <span>Đặt món</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- 3. Trà Đào Cam Sả -->
+            <article class="product-card">
+              <div class="card-thumb">
+                <img src="img/tra_dao_cam_sa.jpg" alt="Trà Đào Cam Sả" loading="lazy">
+              </div>
+              <div class="card-body">
+                <h4 class="card-name">Trà Đào Cam Sả</h4>
+                <p class="card-description">Trà đào tươi kết hợp cùng cam và sả, mang đến vị chua ngọt, thanh mát.</p>
+                <div class="card-bottom">
+                  <span class="card-price">38.000đ</span>
+                  <button type="button" class="order-btn">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                    <span>Đặt món</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- SECTION 3: Bánh Ngọt & Tráng Miệng -->
+        <section class="catalog-section" id="bakery">
+          <div class="section-banner">
+            <h3 class="section-title title-no-icon">Bánh Ngọt &amp; Tráng Miệng Thủ Công</h3>
+            <div class="section-rule"></div>
+          </div>
+
+          <div class="card-grid">
+            <!-- 1. Tiramisu Cacao Ý (MUST TRY) -->
+            <article class="product-card">
+              <div class="card-thumb">
+                <span class="badge-tag badge-musttry">MUST TRY</span>
+                <img src="img/tiramisu_cacao_y.jpg" alt="Tiramisu Cacao Ý" loading="lazy">
+              </div>
+              <div class="card-body">
+                <h4 class="card-name name-warm">Tiramisu Cacao Ý</h4>
+                <p class="card-description">Bánh mềm mịn, đậm đà hương rượu rum nhẹ, cà phê espresso và phô mai mascarpone.</p>
+                <div class="card-bottom">
+                  <span class="card-price">49.000đ</span>
+                  <button type="button" class="order-btn order-btn-simple">
+                    <span>+ Đặt món</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- 2. Croissant Bơ Tươi -->
+            <article class="product-card">
+              <div class="card-thumb">
+                <img src="img/croissant_bo_toi.jpg" alt="Croissant Bơ Tươi" loading="lazy">
+              </div>
+              <div class="card-body">
+                <h4 class="card-name">Croissant Bơ Tươi</h4>
+                <p class="card-description">Bánh sừng bò nướng nóng hổi, vỏ ngoài giòn xốp nhiều lớp, thơm lừng bơ Pháp.</p>
+                <div class="card-bottom">
+                  <span class="card-price">32.000đ</span>
+                  <button type="button" class="order-btn order-btn-simple">
+                    <span>+ Đặt món</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- 3. Cheesecake Chanh Dây -->
+            <article class="product-card">
+              <div class="card-thumb">
+                <img src="img/cheesecake_chanh_day.jpg" alt="Cheesecake Chanh Dây" loading="lazy">
+              </div>
+              <div class="card-body">
+                <h4 class="card-name">Cheesecake Chanh Dây</h4>
+                <p class="card-description">Vị phô mai béo ngậy cân bằng hảo hạng cùng xốt chanh dây chua thanh dịu mát.</p>
+                <div class="card-bottom">
+                  <span class="card-price">45.000đ</span>
+                  <button type="button" class="order-btn order-btn-simple">
+                    <span>+ Đặt món</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- RIGHT COLUMN: Sidebar -->
+      <aside class="sidebar-column" aria-label="Món hot trong tuần">
+        <div class="weekly-specials-card">
+          <!-- Decorative Vintage Corners -->
+          <div class="ornament-corner ornament-tl"></div>
+          <div class="ornament-corner ornament-tr"></div>
+          <div class="ornament-corner ornament-bl"></div>
+          <div class="ornament-corner ornament-br"></div>
+
+          <!-- Sidebar Heading -->
+          <div class="specials-header">
+            <span class="specials-tag">
+              <span class="crown-symbol">👑</span> WEEKLY SPECIALS
+            </span>
+            <h3 class="specials-title">Món Hot Trong Tuần</h3>
+            <p class="specials-subtitle">Được yêu thích nhất – Đừng bỏ lỡ nhé!</p>
+          </div>
+
+          <!-- Specials Items List -->
+          <div class="specials-list">
+            <!-- Special Item 1 -->
+            <div class="special-item">
+              <img src="img/ca_phe_muoi_cozy.jpg" alt="Cà Phê Muối Cozy" class="special-thumb">
+              <div class="special-details">
+                <h5 class="special-name">Cà Phê Muối Cozy</h5>
+                <p class="special-desc">Vị mặn nhẹ, thơm béo đặc trưng</p>
+                <span class="special-price">39.000đ</span>
+              </div>
+              <button type="button" class="btn-round-add" aria-label="Thêm Cà Phê Muối Cozy">+</button>
+            </div>
+
+            <!-- Special Item 2 -->
+            <div class="special-item">
+              <img src="img/tiramisu_classic.jpg" alt="Tiramisu Classic" class="special-thumb">
+              <div class="special-details">
+                <h5 class="special-name">Tiramisu Classic</h5>
+                <p class="special-desc">Bánh mềm, vị cà phê đậm đà</p>
+                <span class="special-price">55.000đ</span>
+              </div>
+              <button type="button" class="btn-round-add" aria-label="Thêm Tiramisu Classic">+</button>
+            </div>
+
+            <!-- Special Item 3 -->
+            <div class="special-item">
+              <img src="img/tra_sen_machiatto.jpg" alt="Trà Sen Macchiato" class="special-thumb">
+              <div class="special-details">
+                <h5 class="special-name">Trà Sen Macchiato</h5>
+                <p class="special-desc">Thanh mát, thơm hương sen</p>
+                <span class="special-price">42.000đ</span>
+              </div>
+              <button type="button" class="btn-round-add" aria-label="Thêm Trà Sen Macchiato">+</button>
+            </div>
+          </div>
+
+          <!-- Promo Weekend Box -->
+          <div class="promo-box">
+            <div class="promo-icon-wrap">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D98836" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 12 20 22 4 22 4 12"></polyline>
+                <rect x="2" y="7" width="20" height="5"></rect>
+                <line x1="12" y1="22" x2="12" y2="7"></line>
+                <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path>
+                <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path>
+              </svg>
+            </div>
+            <h5 class="promo-title">Ưu Đãi Cuối Tuần</h5>
+            <p class="promo-content">Giảm 10% cho tất cả các món đồ uống và bánh ngọt</p>
+            <span class="promo-subnote">(Chỉ áp dụng cuối tuần)</span>
+          </div>
+
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-columns">
+
+        <!-- Column 1: Opening Hours -->
+        <div class="footer-col">
+          <div class="footer-col-header">
+            <span class="footer-col-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D98836" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </span>
+            <h4 class="footer-col-title">GIỜ MỞ CỬA</h4>
+          </div>
+          <div class="footer-title-line"></div>
+
+          <div class="opening-schedule">
+            <div class="schedule-line">
+              <span class="schedule-days">Thứ 2 - Thứ 6:</span>
+              <span class="schedule-time">07:00 - 22:30</span>
+            </div>
+            <div class="schedule-line">
+              <span class="schedule-days">Thứ 7 - Chủ Nhật:</span>
+              <span class="schedule-time">07:00 - 23:00</span>
+            </div>
+          </div>
+          <p class="schedule-note">* Nhận order món cuối cùng trước giờ đóng cửa 30 phút</p>
+        </div>
+
+        <!-- Column 2: Contact Info -->
+        <div class="footer-col">
+          <div class="footer-col-header">
+            <span class="footer-col-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#D98836">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"></path>
+              </svg>
+            </span>
+            <h4 class="footer-col-title">THÔNG TIN LIÊN HỆ</h4>
+          </div>
+          <div class="footer-title-line"></div>
+
+          <ul class="contact-details">
+            <li class="contact-entry">
+              <span class="entry-symbol">📍</span>
+              <span>124 Đường Nguyễn Trãi, Phường Bến Thành, Quận 1, TP. Hồ Chí Minh</span>
+            </li>
+            <li class="contact-entry">
+              <span class="entry-symbol">📞</span>
+              <span>Hotline đặt bàn: <strong>0908 123 456</strong></span>
+            </li>
+            <li class="contact-entry">
+              <span class="entry-symbol">✉</span>
+              <span>Email: contact@thecozybean.vn</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Social Connect -->
+        <div class="footer-col">
+          <div class="footer-col-header">
+            <span class="footer-col-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#D98836">
+                <circle cx="18" cy="5" r="3"></circle>
+                <circle cx="6" cy="12" r="3"></circle>
+                <circle cx="18" cy="19" r="3"></circle>
+                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" stroke="#D98836" stroke-width="2"></line>
+                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" stroke="#D98836" stroke-width="2"></line>
+              </svg>
+            </span>
+            <h4 class="footer-col-title">KẾT NỐI VỚI CHÚNG TÔI</h4>
+          </div>
+          <div class="footer-title-line"></div>
+
+          <p class="social-summary">Theo dõi The Cozy Bean trên các mạng xã hội để cập nhật menu mùa mới và các ưu đãi hấp dẫn hàng tuần!</p>
+
+          <div class="social-button-row">
+            <a href="#facebook" class="social-pill-btn" aria-label="Facebook">
+              <span>f</span>
+            </a>
+            <a href="#instagram" class="social-pill-btn" aria-label="Instagram">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="#tiktok" class="social-pill-btn" aria-label="TikTok">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.29 0 .58.04.85.12V9.41a6.33 6.33 0 0 0-6.38 6.33A6.34 6.34 0 0 0 10.3 22a6.33 6.33 0 0 0 6.34-6.33V8.84a8.21 8.21 0 0 0 4.95 1.63V7.05a4.77 4.77 0 0 1-2-.36z"></path>
+              </svg>
+            </a>
+            <a href="#zalo" class="social-pill-btn btn-zalo" aria-label="Zalo">
+              <span>Zalo</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Copyright Bar -->
+      <div class="footer-copyright-row">
+        <p class="copyright-info">Copyright &copy; 2024 <strong>The Cozy Bean Coffee</strong>. All rights reserved. Designed with warmth &amp; minimal aesthetics.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
