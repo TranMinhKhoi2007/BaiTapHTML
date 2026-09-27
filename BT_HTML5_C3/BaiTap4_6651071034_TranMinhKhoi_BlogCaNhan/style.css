@@ -18,42 +18,43 @@
    1. CSS VARIABLES & RESET CHUNG
    ========================================================================== */
 :root {
-  /* Bảng màu Dark Tech hiện đại & Tương phản cao */
-  --bg-primary: #0b0f19;
-  --bg-secondary: #111827;
-  --bg-card: rgba(23, 32, 54, 0.75);
-  --bg-card-hover: rgba(30, 41, 69, 0.95);
-  --bg-input: #1a2236;
+  /* Bảng màu trung tính mát, lấy cảm hứng phong cách portfolio học thuật (academic) */
+  --bg-primary: #f6f8fb;
+  --bg-secondary: #ffffff;
+  --bg-card: rgba(255, 255, 255, 0.9);
+  --bg-card-hover: rgba(255, 255, 255, 1);
+  --bg-input: #eef2f7;
 
-  /* Màu chủ đạo & Gradient */
-  --accent-cyan: #06b6d4;
-  --accent-indigo: #6366f1;
-  --accent-purple: #a855f7;
-  --accent-green: #10b981;
-  --accent-red: #ef4444;
+  /* Màu chủ đạo & Gradient: tông xanh navy - xanh dương học thuật, điềm đạm, chuyên nghiệp */
+  --accent-cyan: #2c5282;
+  --accent-indigo: #2b6cb0;
+  --accent-purple: #3f6fad;
+  --accent-green: #2f855a;
+  --accent-red: #b7444a;
 
-  --gradient-brand: linear-gradient(135deg, #06b6d4 0%, #6366f1 50%, #a855f7 100%);
-  --gradient-card: linear-gradient(145deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
-  --gradient-btn: linear-gradient(135deg, #06b6d4 0%, #4f46e5 100%);
-  --gradient-btn-hover: linear-gradient(135deg, #22d3ee 0%, #6366f1 100%);
+  --gradient-brand: linear-gradient(135deg, #1a365d 0%, #2c5282 50%, #2b6cb0 100%);
+  --gradient-card: linear-gradient(145deg, rgba(0, 0, 0, 0.035) 0%, rgba(0, 0, 0, 0.01) 100%);
+  --gradient-btn: linear-gradient(135deg, #2c5282 0%, #1a365d 100%);
+  --gradient-btn-hover: linear-gradient(135deg, #2b6cb0 0%, #244e77 100%);
 
-  /* Màu chữ */
-  --text-main: #f3f4f6;
-  --text-muted: #9ca3af;
-  --text-dim: #6b7280;
+  /* Màu chữ: navy đậm cho tiêu đề/nội dung, xám lam cho phụ đề - chuẩn phong cách học thuật */
+  --text-main: #1a2333;
+  --text-muted: #5b6b82;
+  --text-dim: #94a3b8;
 
   /* Đường viền & Bóng đổ */
-  --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-active: #06b6d4;
-  --border-card: rgba(99, 102, 241, 0.2);
+  --border-subtle: rgba(26, 54, 93, 0.1);
+  --border-active: #2c5282;
+  --border-card: rgba(44, 82, 130, 0.22);
 
-  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
-  --shadow-glow: 0 0 20px rgba(6, 182, 212, 0.35);
-  --shadow-glow-purple: 0 0 25px rgba(168, 85, 247, 0.35);
+  --shadow-sm: 0 4px 6px -1px rgba(26, 35, 51, 0.06);
+  --shadow-md: 0 10px 25px -5px rgba(26, 35, 51, 0.1);
+  --shadow-glow: 0 0 20px rgba(44, 82, 130, 0.25);
+  --shadow-glow-purple: 0 0 25px rgba(43, 108, 176, 0.3);
 
-  /* Font & Chuyển động */
-  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  /* Font & Chuyển động: Plus Jakarta Sans cho tiêu đề (chuẩn Geometric Sans, full tiếng Việt), Inter cho nội dung */
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-heading: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
   --transition-fast: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-normal: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-slow: 0.7s cubic-bezier(0.4, 0, 0.2, 1);
@@ -68,6 +69,15 @@
   padding: 0;
 }
 
+/* Đảm bảo các phần tử form & nút bấm luôn kế thừa font chữ của hệ thống thay vì dùng Arial mặc định */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+}
+
 /* Cuộn trang mượt mà khi bấm anchor link */
 html {
   scroll-behavior: smooth;
@@ -79,13 +89,22 @@ body {
   background-color: var(--bg-primary);
   /* Kỹ thuật: Multiple background layers kết hợp Radial và Linear Gradient */
   background-image: 
-    radial-gradient(circle at 15% 20%, rgba(99, 102, 241, 0.12) 0%, transparent 40%),
-    radial-gradient(circle at 85% 60%, rgba(6, 182, 212, 0.10) 0%, transparent 45%),
-    linear-gradient(180deg, #0b0f19 0%, #0d1322 100%);
+    radial-gradient(circle at 15% 20%, rgba(43, 108, 176, 0.10) 0%, transparent 40%),
+    radial-gradient(circle at 85% 60%, rgba(26, 54, 93, 0.08) 0%, transparent 45%),
+    linear-gradient(180deg, #f6f8fb 0%, #eef2f7 100%);
   background-attachment: fixed;
   color: var(--text-main);
   line-height: 1.65;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Font tiêu đề riêng (Plus Jakarta Sans) cho toàn bộ heading + logo - đồng bộ phong cách hiện đại */
+h1, h2, h3, h4, h5, h6,
+.logo, .footer-logo {
+  font-family: var(--font-heading);
 }
 
 /* Container dùng chung */
@@ -123,6 +142,8 @@ body {
 .section-title {
   font-size: 2.5rem;
   font-weight: 800;
+  line-height: 1.3;
+  padding: 4px 0;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   background: var(--gradient-brand);
@@ -132,7 +153,7 @@ body {
   display: inline-block;
   position: relative;
   /* Kỹ thuật text-shadow để tạo chiều sâu phát sáng */
-  text-shadow: 0 0 30px rgba(99, 102, 241, 0.3);
+  text-shadow: 0 0 30px rgba(124, 122, 158, 0.3);
 }
 
 /* Pseudo-element ::after tạo đường gạch trang trí dưới tiêu đề */
@@ -173,7 +194,7 @@ ul {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(11, 15, 25, 0.85);
+  background: rgba(246, 248, 251, 0.85);
   /* Kỹ thuật kính mờ hiện đại (Glassmorphism) */
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
@@ -307,7 +328,7 @@ ul {
 }
 
 .nav-link:hover {
-  color: #ffffff;
+  color: var(--text-main);
 }
 
 .nav-link:hover::after {
@@ -318,8 +339,8 @@ ul {
 /* Nút Contact nổi bật trên Navbar */
 .nav-btn-contact {
   padding: 8px 18px !important;
-  background: rgba(99, 102, 241, 0.15);
-  border: 1px solid rgba(99, 102, 241, 0.4);
+  background: rgba(124, 122, 158, 0.15);
+  border: 1px solid rgba(124, 122, 158, 0.4);
   border-radius: 30px;
   color: var(--accent-cyan) !important;
   transition: all var(--transition-fast) !important;
@@ -347,7 +368,7 @@ ul {
   align-items: center;
   padding: 60px 0;
   /* Kỹ thuật: Background gradient động chuyển màu nhẹ bằng @keyframes */
-  background: linear-gradient(135deg, rgba(6, 182, 212, 0.04), rgba(99, 102, 241, 0.08), rgba(168, 85, 247, 0.04));
+  background: linear-gradient(135deg, rgba(91, 127, 146, 0.04), rgba(124, 122, 158, 0.08), rgba(169, 143, 174, 0.04));
   background-size: 200% 200%;
   animation: heroBgAnimation 12s ease infinite alternate;
   overflow: hidden;
@@ -382,8 +403,8 @@ ul {
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--accent-cyan);
-  background: rgba(6, 182, 212, 0.12);
-  border: 1px solid rgba(6, 182, 212, 0.3);
+  background: rgba(91, 127, 146, 0.12);
+  border: 1px solid rgba(91, 127, 146, 0.3);
   border-radius: 20px;
   margin-bottom: 20px;
   letter-spacing: 0.04em;
@@ -401,7 +422,7 @@ ul {
   font-weight: 900;
   line-height: 1.15;
   margin-bottom: 12px;
-  color: #ffffff;
+  color: var(--text-main);
   letter-spacing: -0.02em;
 }
 
@@ -436,6 +457,7 @@ ul {
   justify-content: center;
   gap: 10px;
   padding: 14px 28px;
+  font-family: inherit;
   font-size: 1rem;
   font-weight: 600;
   border-radius: 30px;
@@ -449,26 +471,26 @@ ul {
 .btn-primary {
   background: var(--gradient-btn);
   color: #ffffff;
-  box-shadow: 0 10px 20px -5px rgba(6, 182, 212, 0.4);
+  box-shadow: 0 10px 20px -5px rgba(91, 127, 146, 0.4);
 }
 
 .btn-primary:hover {
   background: var(--gradient-btn-hover);
   transform: translateY(-3px) scale(1.03);
-  box-shadow: 0 14px 28px -5px rgba(6, 182, 212, 0.6);
+  box-shadow: 0 14px 28px -5px rgba(91, 127, 146, 0.6);
 }
 
 /* Nút CTA phụ (Outline) - Sử dụng pseudo-class :not() */
 .btn-outline:not(.btn-primary) {
   background: transparent;
   color: var(--text-main);
-  border-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(0, 0, 0, 0.15);
 }
 
 .btn-outline:hover {
   border-color: var(--accent-cyan);
   color: var(--accent-cyan);
-  background: rgba(6, 182, 212, 0.08);
+  background: rgba(91, 127, 146, 0.08);
   transform: translateY(-3px) scale(1.03);
 }
 
@@ -498,11 +520,11 @@ ul {
 
 @keyframes pulseGlow {
   0% {
-    box-shadow: 0 0 20px rgba(6, 182, 212, 0.4), 0 0 40px rgba(99, 102, 241, 0.2);
+    box-shadow: 0 0 20px rgba(91, 127, 146, 0.4), 0 0 40px rgba(124, 122, 158, 0.2);
     transform: scale(0.98);
   }
   100% {
-    box-shadow: 0 0 35px rgba(6, 182, 212, 0.7), 0 0 60px rgba(168, 85, 247, 0.4);
+    box-shadow: 0 0 35px rgba(91, 127, 146, 0.7), 0 0 60px rgba(169, 143, 174, 0.4);
     transform: scale(1.02);
   }
 }
@@ -541,7 +563,7 @@ ul {
   align-items: center;
   justify-content: center;
   color: var(--accent-cyan);
-  background: linear-gradient(145deg, #131b2e 0%, #1e2942 100%);
+  background: linear-gradient(145deg, #eaf0f7 0%, #dde6f0 100%);
   gap: 12px;
   font-size: 0.9rem;
   font-weight: 500;
@@ -603,7 +625,7 @@ ul {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #131c31 0%, #1c2744 100%);
+  background: linear-gradient(135deg, #eaf0f7 0%, #dbe4f0 100%);
   color: var(--accent-indigo);
   gap: 14px;
   font-weight: 600;
@@ -614,7 +636,7 @@ ul {
   position: absolute;
   bottom: 20px;
   right: 20px;
-  background: rgba(11, 15, 25, 0.92);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(10px);
   border: 1px solid var(--accent-cyan);
   padding: 14px 20px;
@@ -622,7 +644,7 @@ ul {
   display: flex;
   align-items: center;
   gap: 12px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 10px 20px rgba(45, 42, 38, 0.15);
   /* Kỹ thuật 2D Skew tạo nét phá cách */
   transform: skew(-2deg);
 }
@@ -647,7 +669,7 @@ ul {
   font-size: 1.8rem;
   font-weight: 700;
   margin-bottom: 24px;
-  color: #ffffff;
+  color: var(--text-main);
   line-height: 1.3;
 }
 
@@ -658,7 +680,7 @@ ul {
 .about-columns-text {
   column-count: 2;
   column-gap: 36px;
-  column-rule: 1px dashed rgba(99, 102, 241, 0.3);
+  column-rule: 1px dashed rgba(124, 122, 158, 0.3);
   text-align: justify;
   color: var(--text-muted);
   font-size: 0.96rem;
@@ -680,12 +702,12 @@ ul {
 .about-quote {
   position: relative;
   padding: 20px 24px 20px 54px;
-  background: rgba(99, 102, 241, 0.08);
+  background: rgba(124, 122, 158, 0.08);
   border-left: 4px solid var(--accent-indigo);
   border-radius: 0 12px 12px 0;
   margin-bottom: 28px;
   font-style: italic;
-  color: #e0e7ff;
+  color: #2c3e5c;
   font-size: 1rem;
 }
 
@@ -712,7 +734,7 @@ ul {
   font-size: 0.95rem;
   color: var(--text-muted);
   padding: 8px 12px;
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(0, 0, 0, 0.025);
   border-radius: 8px;
   border-left: 2px solid var(--accent-cyan);
 }
@@ -758,7 +780,7 @@ ul {
 /* Hover 3D: Nổi khối 3D với rotateY + translateZ */
 .skill-card:hover {
   transform: perspective(1000px) rotateY(6deg) translateY(-8px) translateZ(15px);
-  box-shadow: 0 18px 35px -5px rgba(0, 0, 0, 0.6), var(--shadow-glow);
+  box-shadow: 0 18px 35px -5px rgba(45, 42, 38, 0.15), var(--shadow-glow);
   border-color: var(--accent-cyan);
   background: var(--bg-card-hover);
 }
@@ -785,26 +807,26 @@ ul {
   width: 64px;
   height: 64px;
   border-radius: 14px;
-  background: rgba(99, 102, 241, 0.12);
+  background: rgba(124, 122, 158, 0.12);
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--accent-cyan);
   margin-bottom: 20px;
-  border: 1px solid rgba(6, 182, 212, 0.3);
+  border: 1px solid rgba(91, 127, 146, 0.3);
   transition: transform var(--transition-fast);
 }
 
 .skill-card:hover .skill-icon-box {
   transform: scale(1.1) rotate(5deg);
-  background: rgba(6, 182, 212, 0.2);
+  background: rgba(91, 127, 146, 0.2);
 }
 
 .skill-name {
   font-size: 1.3rem;
   font-weight: 700;
   margin-bottom: 10px;
-  color: #ffffff;
+  color: var(--text-main);
 }
 
 .skill-desc {
@@ -839,9 +861,9 @@ ul {
 .skill-bar-track {
   width: 100%;
   height: 10px;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.08);
   border-radius: 10px;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.12);
   overflow: hidden;
   position: relative;
 }
@@ -935,7 +957,7 @@ ul {
   width: 100%;
   height: 200px;
   overflow: hidden;
-  background-color: #131b2e;
+  background-color: #eaf0f7;
 }
 
 .project-thumb-img {
@@ -959,10 +981,10 @@ ul {
   font-size: 0.95rem;
 }
 
-.p1-bg { background: linear-gradient(135deg, #0ea5e9, #6366f1); }
-.p2-bg { background: linear-gradient(135deg, #ec4899, #8b5cf6); }
-.p3-bg { background: linear-gradient(135deg, #10b981, #0284c7); }
-.p4-bg { background: linear-gradient(135deg, #f59e0b, #ef4444); }
+.p1-bg { background: linear-gradient(135deg, #8aa8b8, #7c7a9e); }
+.p2-bg { background: linear-gradient(135deg, #c99bab, #a98fae); }
+.p3-bg { background: linear-gradient(135deg, #7fa387, #6f96a8); }
+.p4-bg { background: linear-gradient(135deg, #d7b88a, #c17b6f); }
 
 .project-category-badge {
   position: absolute;
@@ -972,7 +994,7 @@ ul {
   font-size: 0.75rem;
   font-weight: 700;
   color: #ffffff;
-  background: rgba(11, 15, 25, 0.85);
+  background: rgba(45, 42, 38, 0.72);
   backdrop-filter: blur(6px);
   border: 1px solid var(--border-subtle);
   border-radius: 20px;
@@ -986,7 +1008,7 @@ ul {
 .project-title {
   font-size: 1.25rem;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--text-main);
   margin-bottom: 10px;
 }
 
@@ -1005,13 +1027,13 @@ ul {
 }
 
 .tag {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 600;
   padding: 4px 10px;
   border-radius: 20px;
-  background: rgba(99, 102, 241, 0.15);
+  background: rgba(124, 122, 158, 0.15);
   color: var(--accent-cyan);
-  border: 1px solid rgba(6, 182, 212, 0.2);
+  border: 1px solid rgba(91, 127, 146, 0.2);
 }
 
 .flip-hint {
@@ -1019,24 +1041,24 @@ ul {
   font-size: 0.8rem;
   color: var(--accent-cyan);
   font-weight: 600;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-  background: rgba(0, 0, 0, 0.15);
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  background: rgba(0, 0, 0, 0.03);
   text-align: right;
 }
 
 /* --- MẶT SAU (BACK) --- */
 .flip-card-back {
-  background: linear-gradient(145deg, #12192c 0%, #1a2542 100%);
+  background: linear-gradient(145deg, #eef2f8 0%, #e2e9f3 100%);
   padding: 30px;
   transform: rotateY(180deg); /* Lật ngược 180 độ sẵn để khi hover quay về mặt trước */
   justify-content: center;
-  border-color: rgba(99, 102, 241, 0.4);
+  border-color: rgba(124, 122, 158, 0.4);
 }
 
 .back-title {
   font-size: 1.4rem;
   font-weight: 800;
-  color: #ffffff;
+  color: var(--text-main);
   margin-bottom: 12px;
   border-bottom: 2px solid var(--accent-cyan);
   padding-bottom: 8px;
@@ -1055,7 +1077,7 @@ ul {
 
 .back-features li {
   font-size: 0.88rem;
-  color: #e2e8f0;
+  color: var(--text-main);
   margin-bottom: 8px;
   position: relative;
   padding-left: 20px;
@@ -1100,8 +1122,8 @@ ul {
 }
 
 .btn-card-link.outline:hover {
-  background: rgba(6, 182, 212, 0.15);
-  color: #ffffff;
+  background: rgba(91, 127, 146, 0.15);
+  color: var(--text-main);
 }
 
 /* ==========================================================================
@@ -1133,7 +1155,7 @@ ul {
 .info-title {
   font-size: 1.7rem;
   font-weight: 800;
-  color: #ffffff;
+  color: var(--text-main);
   margin-bottom: 14px;
 }
 
@@ -1161,8 +1183,8 @@ ul {
   width: 48px;
   height: 48px;
   border-radius: 12px;
-  background: rgba(6, 182, 212, 0.12);
-  border: 1px solid rgba(6, 182, 212, 0.3);
+  background: rgba(91, 127, 146, 0.12);
+  border: 1px solid rgba(91, 127, 146, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1202,7 +1224,7 @@ ul {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(0, 0, 0, 0.04);
   border: 1px solid var(--border-subtle);
   display: flex;
   align-items: center;
@@ -1252,7 +1274,7 @@ ul {
   padding: 14px 18px;
   font-family: inherit;
   font-size: 0.95rem;
-  color: #ffffff;
+  color: var(--text-main);
   background-color: var(--bg-input);
   border: 1.5px solid var(--border-subtle);
   border-radius: 12px;
@@ -1277,8 +1299,8 @@ ul {
 .form-input:focus,
 .form-textarea:focus {
   border-color: var(--accent-cyan);
-  background-color: #1f2a44;
-  box-shadow: 0 0 0 4px rgba(6, 182, 212, 0.25);
+  background-color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(91, 127, 146, 0.2);
 }
 
 /* --- TRẠNG THÁI :valid & :invalid NÂNG CAO ---
@@ -1293,7 +1315,7 @@ ul {
 .form-input:required:invalid:not(:placeholder-shown),
 .form-textarea:required:invalid:not(:placeholder-shown) {
   border-color: var(--accent-red);
-  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
+  box-shadow: 0 0 0 3px rgba(193, 123, 111, 0.2);
 }
 
 /* Dòng thông báo validation thuần CSS */
@@ -1327,20 +1349,20 @@ ul {
   font-size: 1rem;
   font-weight: 600;
   border-radius: 30px;
-  box-shadow: 0 10px 20px -5px rgba(6, 182, 212, 0.4);
+  box-shadow: 0 10px 20px -5px rgba(91, 127, 146, 0.4);
 }
 
 .btn-submit:hover {
   background: var(--gradient-btn-hover);
   transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 14px 28px -5px rgba(6, 182, 212, 0.6);
+  box-shadow: 0 14px 28px -5px rgba(91, 127, 146, 0.6);
 }
 
 /* ==========================================================================
    9. FOOTER & BACK TO TOP
    ========================================================================== */
 .site-footer {
-  background-color: #080c14;
+  background-color: #eef2f8;
   border-top: 1px solid var(--border-subtle);
   padding: 60px 0 30px;
 }
@@ -1359,7 +1381,7 @@ ul {
 .footer-logo {
   font-size: 1.4rem;
   font-weight: 800;
-  color: #ffffff;
+  color: var(--text-main);
   display: inline-block;
   margin-bottom: 12px;
 }
@@ -1374,7 +1396,7 @@ ul {
 .footer-heading {
   font-size: 1.05rem;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--text-main);
   margin-bottom: 16px;
   position: relative;
   display: inline-block;
@@ -1412,7 +1434,7 @@ ul {
   align-items: center;
   gap: 8px;
   padding: 10px 18px;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(0, 0, 0, 0.04);
   border: 1px solid var(--border-subtle);
   border-radius: 25px;
   color: var(--text-muted);
@@ -1433,7 +1455,7 @@ ul {
   max-width: 1200px;
   margin: 0 auto;
   padding: 24px 24px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
   text-align: center;
   font-size: 0.88rem;
   color: var(--text-dim);
@@ -1509,7 +1531,7 @@ ul {
     top: 65px;
     left: 0;
     width: 100%;
-    background: rgba(11, 15, 25, 0.98);
+    background: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border-card);
     padding: 0;

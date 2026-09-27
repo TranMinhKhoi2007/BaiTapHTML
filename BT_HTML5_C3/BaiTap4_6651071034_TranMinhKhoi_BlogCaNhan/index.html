@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio Cá Nhân - Trần Minh Khởi | Front-End Developer</title>
+  <!-- Font chữ Google Fonts: Plus Jakarta Sans (tiêu đề, hỗ trợ chuẩn 100% tiếng Việt) + Inter (nội dung) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
   <!-- Liên kết file CSS thuần (Không dùng thư viện hay framework bên ngoài) -->
   <link rel="stylesheet" href="style.css">
 </head>
@@ -75,12 +79,7 @@
         <div class="hero-avatar-wrapper">
           <div class="avatar-glow-ring">
             <div class="avatar-frame">
-              <!-- =======================================================
-                   [CHỖ TRỐNG CHÈN ẢNH: Ảnh chân dung cá nhân dạng khung tròn]
-                   Bạn có thể đặt ảnh chân dung vào thư mục images/avatar.jpg
-                   CSS đã có fallback màu nền và icon nếu chưa chèn ảnh
-                   ======================================================= -->
-              <img src="images/avatar.jpg" alt="Chân dung Trần Minh Khởi" class="avatar-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <img src="images/avatar.jpg" alt="Chân dung Trần Minh Khôi" class="avatar-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
               <!-- Fallback placeholder hiển thị khi chưa có file ảnh -->
               <div class="avatar-placeholder" style="display:none;">
                 <svg width="96" height="96" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -112,10 +111,6 @@
           <!-- Cột ảnh minh họa học tập / làm việc -->
           <div class="about-image-wrapper">
             <div class="about-image-card">
-              <!-- =====================================================
-                   [CHỖ TRỐNG CHÈN ẢNH: Ảnh phụ minh họa làm việc/học tập]
-                   Đặt ảnh vào images/about.jpg để hiển thị
-                   ===================================================== -->
               <img src="images/about.jpg" alt="Ảnh làm việc học tập" class="about-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
               <!-- Fallback khi chưa có file ảnh -->
               <div class="image-placeholder" style="display:none;">
@@ -127,7 +122,7 @@
                 <span>Chèn ảnh about.jpg</span>
               </div>
               <div class="about-badge-exp">
-                <span class="exp-number">02+</span>
+                <span class="exp-number">01+</span>
                 <span class="exp-text">Năm tự học &amp; thực hành Code</span>
               </div>
             </div>
@@ -430,27 +425,26 @@
             </div>
           </div>
 
-          <!-- Project 3: Modern Blog & Magazine -->
+          <!-- Project 3: Hotel Management Console app in C -->
           <div class="flip-card-container">
             <div class="flip-card-inner">
               <!-- Mặt trước (Front) -->
               <div class="flip-card-front">
                 <div class="project-thumb-box">
                   <!-- [CHỖ TRỐNG CHÈN ẢNH: Screenshot Project 3] -->
-                  <img src="images/project-3.jpg" alt="Dự án Tạp chí Công nghệ" class="project-thumb-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <img src="images/project-3.jpg" alt="Dự án quản lý khách sạn" class="project-thumb-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                   <div class="thumb-placeholder p3-bg" style="display:none;">
                     <span>Project 3 Preview</span>
                   </div>
-                  <span class="project-category-badge">Typography</span>
+                  <span class="project-category-badge">C</span>
                 </div>
                 <div class="project-front-info">
-                  <h3 class="project-title">DevMagazine &amp; Blog</h3>
-                  <p class="project-short-desc">Website tạp chí bài viết công nghệ với nghệ thuật typography phong phú, bố cục đa cột và chế độ đọc bài dễ chịu.</p>
+                  <h3 class="project-title">Hotel Management</h3>
+                  <p class="project-short-desc">Dự án xây dựng một phần mềm quản lý khách sạn chạy trên giao diện dòng lệnh (CLI) bằng ngôn ngữ C.</p>
                   <div class="tech-tags">
-                    <span class="tag">Multi-Column</span>
-                    <span class="tag">Typography</span>
-                    <span class="tag">Dark Mode</span>
-                    <span class="tag">Semantic</span>
+                    <span class="tag">File Handling</span>
+                    <span class="tag">Function & Module</span>
+                    <span class="tag">Linked List</span>
                   </div>
                 </div>
                 <div class="flip-hint">
@@ -471,34 +465,34 @@
                   <li>Anchor link điều hướng mục lục tự động</li>
                 </ul>
                 <div class="back-actions">
-                  <a href="#projects" class="btn-card-link">Xem Demo</a>
-                  <a href="https://github.com" target="_blank" rel="noopener" class="btn-card-link outline">Mã nguồn GitHub</a>
+                  <a href="https://www.tiktok.com/@toshi1475/video/7639976554700852487" target="_blank" class="btn-card-link">Xem Demo</a>
+                  <a href="https://github.com/QLKS-UTC2-IT-K66/Project-Group9" target="_blank" rel="noopener" class="btn-card-link outline">Mã nguồn GitHub</a>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Project 4: Interactive Dashboard UI -->
+          <!-- Project 4: Go ride C++ project -->
           <div class="flip-card-container">
             <div class="flip-card-inner">
               <!-- Mặt trước (Front) -->
               <div class="flip-card-front">
                 <div class="project-thumb-box">
                   <!-- [CHỖ TRỐNG CHÈN ẢNH: Screenshot Project 4] -->
-                  <img src="images/project-4.jpg" alt="Dự án Dashboard Quản trị" class="project-thumb-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <img src="images/project-4.png" alt="Go Ride app đặt xe" class="project-thumb-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                   <div class="thumb-placeholder p4-bg" style="display:none;">
                     <span>Project 4 Preview</span>
                   </div>
-                  <span class="project-category-badge">Glassmorphism</span>
+                  <span class="project-category-badge">C++</span>
                 </div>
                 <div class="project-front-info">
-                  <h3 class="project-title">Analytics Dashboard UI</h3>
-                  <p class="project-short-desc">Bảng điều khiển trực quan hóa dữ liệu phong cách kính mờ (glassmorphism), bảng số liệu và biểu đồ CSS thuần.</p>
+                  <h3 class="project-title">Go Ride</h3>
+                  <p class="project-short-desc">Go Ride mô phỏng quy trình hoạt động của một nền tảng đặt xe công nghệ như Grab, Be hoặc Gojek.</p>
                   <div class="tech-tags">
-                    <span class="tag">Backdrop-Filter</span>
-                    <span class="tag">Data Tables</span>
-                    <span class="tag">CSS Charts</span>
-                    <span class="tag">Flexbox</span>
+                    <span class="tag">BFS Algorithm</span>
+                    <span class="tag">Object Oriented Programming</span>
+                    <span class="tag">Manhattan distance</span>
+                    <span class="tag">Qt Widgets</span>
                   </div>
                 </div>
                 <div class="flip-hint">
@@ -508,19 +502,20 @@
 
               <!-- Mặt sau (Back) -->
               <div class="flip-card-back">
-                <h3 class="back-title">Analytics Dashboard UI</h3>
+                <h3 class="back-title">Go Ride</h3>
                 <p class="back-desc">
-                  Thiết kế giao diện trung tâm điều hành hiện đại:
+                  Ứng dụng mô phỏng đặt xe hiện đại:
                 </p>
                 <ul class="back-features">
-                  <li>Hiệu ứng nền kính mờ xuyên thấu thời thượng</li>
-                  <li>Biểu đồ thanh cột được dựng bằng CSS thuần</li>
-                  <li>Sidebar điều hướng xếp gọn theo breakpoint</li>
-                  <li>Bảng dữ liệu scroll ngang mượt mà trên mobile</li>
+                  <li>Giao diện đồ họa bằng Qt Widgets</li>
+                  <li>Bản đồ dạng lưới tương tác</li>
+                  <li>Đặt xe và ghép tài xế</li>
+                  <li>Lưu lịch sử chuyến đi</li>
+                  <li>Tính giá cước và thanh toán</li>
                 </ul>
                 <div class="back-actions">
-                  <a href="#projects" class="btn-card-link">Xem Demo</a>
-                  <a href="https://github.com" target="_blank" rel="noopener" class="btn-card-link outline">Mã nguồn GitHub</a>
+                  <a href="https://www.tiktok.com/@toshi1475/video/7670001961789345044" target="_blank" class="btn-card-link">Xem Demo</a>
+                  <a href="https://github.com/masterpham07/GoRide" target="_blank" rel="noopener" class="btn-card-link outline">Mã nguồn GitHub</a>
                 </div>
               </div>
             </div>
@@ -605,13 +600,13 @@
                   </svg>
                 </a>
                 <!-- LinkedIn -->
-                <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-btn" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/in/tr%E1%BA%A7n-kh%C3%B4i-7461343a8/" target="_blank" rel="noopener" class="social-btn" aria-label="LinkedIn">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                   </svg>
                 </a>
                 <!-- Facebook -->
-                <a href="https://facebook.com" target="_blank" rel="noopener" class="social-btn" aria-label="Facebook">
+                <a href="https://www.facebook.com/profile.php?id=61590222036968" target="_blank" rel="noopener" class="social-btn" aria-label="Facebook">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/>
                   </svg>
