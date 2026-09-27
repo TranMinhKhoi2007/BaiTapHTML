@@ -1619,3 +1619,256 @@ ul {
     height: 480px;
   }
 }
+
+/* ==========================================================================
+   11. NÚT TOGGLE DARK / LIGHT MODE & GIAO DIỆN DARK THEME
+   - Dùng 2 icon SVG trong folder images:
+     + images/sun-svgrepo-com.svg (Light mode)
+     + images/moon-svgrepo-com.svg (Dark mode)
+   - Lưu trữ trạng thái trong localStorage
+   ========================================================================== */
+
+/* Nút bấm Toggle Dark/Light Mode trên Navigation Bar */
+.nav-theme-item {
+  display: flex;
+  align-items: center;
+}
+
+.theme-toggle-btn {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  border-radius: 30px;
+  transition: transform var(--transition-fast);
+}
+
+.theme-toggle-btn:hover {
+  transform: scale(1.05);
+}
+
+.theme-toggle-btn:active {
+  transform: scale(0.95);
+}
+
+.theme-toggle-btn:focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 3px;
+}
+
+/* Khung trượt (Track) của nút Toggle */
+.theme-toggle-track {
+  width: 58px;
+  height: 30px;
+  background-color: rgba(44, 82, 130, 0.12);
+  border: 1.5px solid var(--border-subtle);
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4px;
+  position: relative;
+  transition: background-color var(--transition-normal), border-color var(--transition-normal), box-shadow var(--transition-normal);
+  cursor: pointer;
+}
+
+.theme-toggle-btn:hover .theme-toggle-track {
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 12px rgba(44, 82, 130, 0.2);
+}
+
+/* Vòng tròn trượt (Thumb) */
+.theme-toggle-thumb {
+  position: absolute;
+  top: 2.5px;
+  left: 3px;
+  width: 22px;
+  height: 22px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), background-color var(--transition-normal);
+  z-index: 1;
+}
+
+/* Khung chứa Icon */
+.theme-icon-wrapper {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Icon SVG */
+.theme-icon {
+  width: 15px;
+  height: 15px;
+  display: block;
+  object-fit: contain;
+  transition: opacity var(--transition-fast), transform var(--transition-fast), filter var(--transition-fast);
+}
+
+/* Mặc định ở Light Mode: Icon Mặt trời sáng rõ trên Thumb, Mặt trăng mờ */
+.theme-icon-sun {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.theme-icon-moon {
+  opacity: 0.45;
+  transform: scale(0.85);
+}
+
+/* ==========================================================================
+   BẢNG MÀU & ĐỊNH DẠNG DARK MODE (Áp dụng khi bật .dark-mode)
+   ========================================================================== */
+:root.dark-mode,
+body.dark-mode {
+  --bg-primary: #0a0f1d;
+  --bg-secondary: #111827;
+  --bg-card: rgba(17, 24, 39, 0.88);
+  --bg-card-hover: rgba(24, 34, 53, 0.98);
+  --bg-input: #1a2333;
+
+  --accent-cyan: #38bdf8;
+  --accent-indigo: #60a5fa;
+  --accent-purple: #818cf8;
+  --accent-green: #34d399;
+  --accent-red: #f87171;
+
+  --gradient-brand: linear-gradient(135deg, #38bdf8 0%, #60a5fa 50%, #818cf8 100%);
+  --gradient-card: linear-gradient(145deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 100%);
+  --gradient-btn: linear-gradient(135deg, #0284c7 0%, #2563eb 100%);
+  --gradient-btn-hover: linear-gradient(135deg, #38bdf8 0%, #3b82f6 100%);
+
+  --text-main: #f1f5f9;
+  --text-muted: #94a3b8;
+  --text-dim: #64748b;
+
+  --border-subtle: rgba(255, 255, 255, 0.12);
+  --border-active: #38bdf8;
+  --border-card: rgba(56, 189, 248, 0.22);
+
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 20px rgba(56, 189, 248, 0.28);
+  --shadow-glow-purple: 0 0 25px rgba(96, 165, 250, 0.35);
+}
+
+body.dark-mode {
+  background-color: var(--bg-primary);
+  background-image: 
+    radial-gradient(circle at 15% 20%, rgba(56, 189, 248, 0.09) 0%, transparent 40%),
+    radial-gradient(circle at 85% 60%, rgba(96, 165, 250, 0.07) 0%, transparent 45%),
+    linear-gradient(180deg, #070b14 0%, #0a0f1d 100%);
+  color: var(--text-main);
+}
+
+/* Nút Toggle khi ở Dark Mode: Thumb trượt sang vị trí Mặt trăng */
+body.dark-mode .theme-toggle-track {
+  background-color: rgba(30, 41, 59, 0.85);
+  border-color: rgba(56, 189, 248, 0.35);
+}
+
+body.dark-mode .theme-toggle-btn:hover .theme-toggle-track {
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 14px rgba(56, 189, 248, 0.35);
+}
+
+body.dark-mode .theme-toggle-thumb {
+  transform: translateX(28px);
+  background-color: #1e293b;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+}
+
+body.dark-mode .theme-icon-sun {
+  opacity: 0.45;
+  transform: scale(0.85);
+  filter: brightness(1.6);
+}
+
+body.dark-mode .theme-icon-moon {
+  opacity: 1;
+  transform: scale(1);
+  filter: brightness(0) invert(1); /* Chuyển icon Mặt trăng thành màu trắng tinh sáng */
+}
+
+/* Chi tiết các khối giao diện khi ở Dark Mode */
+body.dark-mode .site-header {
+  background: rgba(10, 15, 29, 0.88);
+  border-bottom-color: var(--border-subtle);
+}
+
+body.dark-mode .nav-menu {
+  background: rgba(17, 24, 39, 0.98);
+  border-bottom-color: var(--border-card);
+}
+
+body.dark-mode .nav-btn-contact {
+  background: rgba(56, 189, 248, 0.15) !important;
+  border-color: rgba(56, 189, 248, 0.4) !important;
+  color: var(--accent-cyan) !important;
+}
+
+body.dark-mode .avatar-placeholder,
+body.dark-mode .image-placeholder {
+  background: linear-gradient(145deg, #111827 0%, #1f2937 100%);
+  color: var(--accent-cyan);
+}
+
+body.dark-mode .about-badge-exp {
+  background: rgba(17, 24, 39, 0.95);
+  border-color: var(--accent-cyan);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Mặt sau của 3D Card chuyển sang màu tối ở Dark Mode */
+body.dark-mode .flip-card-back {
+  background: linear-gradient(145deg, #111827 0%, #1f2937 100%);
+  border-color: var(--border-card);
+}
+
+
+body.dark-mode .form-input:focus,
+body.dark-mode .form-textarea:focus {
+  background-color: #1a2333;
+}
+
+body.dark-mode .btn-back-top {
+  background: rgb(110, 109, 109);
+  color: white;
+}
+
+body.dark-mode .btn-back-top:hover {
+  background: var(--gradient-btn);
+  color: black;
+}
+
+body.dark-mode .footer-bottom {
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode footer{
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+/* Đảm bảo menu mobile đủ chiều cao và căn giữa nút toggle */
+@media screen and (max-width: 768px) {
+  .nav-toggle-checkbox:checked ~ .nav-menu {
+    max-height: 440px;
+  }
+  
+  .nav-theme-item {
+    justify-content: center;
+    padding-bottom: 4px;
+  }
+}

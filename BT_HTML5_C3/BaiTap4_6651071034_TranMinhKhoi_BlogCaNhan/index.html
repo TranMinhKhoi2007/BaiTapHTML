@@ -10,6 +10,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
   <!-- Liên kết file CSS thuần (Không dùng thư viện hay framework bên ngoài) -->
   <link rel="stylesheet" href="style.css">
+  <!-- Khôi phục theme sớm để tránh hiện tượng nhấp nháy trắng (FOUC) khi tải lại trang -->
+  <script>
+    (function() {
+      try {
+        var savedTheme = localStorage.getItem('theme');
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+          document.documentElement.classList.add('dark-mode');
+        }
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
 
@@ -37,6 +49,20 @@
       <!-- Danh sách liên kết điều hướng (Anchor links tới các section) -->
       <nav class="nav-menu">
         <ul class="nav-list">
+          <!-- Nút toggle Dark/Light mode nằm bên trái nút Home -->
+          <li class="nav-item nav-theme-item">
+            <button type="button" id="theme-toggle" class="theme-toggle-btn" aria-label="Chuyển đổi giao diện Sáng / Tối" title="Chuyển đổi giao diện Sáng / Tối">
+              <span class="theme-toggle-track">
+                <span class="theme-toggle-thumb"></span>
+                <span class="theme-icon-wrapper sun-wrapper">
+                  <img src="images/sun-svgrepo-com.svg" alt="Light mode" class="theme-icon theme-icon-sun">
+                </span>
+                <span class="theme-icon-wrapper moon-wrapper">
+                  <img src="images/moon-svgrepo-com.svg" alt="Dark mode" class="theme-icon theme-icon-moon">
+                </span>
+              </span>
+            </button>
+          </li>
           <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
           <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
           <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
@@ -454,15 +480,16 @@
 
               <!-- Mặt sau (Back) -->
               <div class="flip-card-back">
-                <h3 class="back-title">DevMagazine &amp; Blog</h3>
+                <h3 class="back-title">Hotel Management</h3>
                 <p class="back-desc">
-                  Nền tảng đọc tin tức và bài viết chuyên sâu dành cho lập trình viên:
+                  Console app quản lý khách sạn lập trình bằng ngôn ngữ C:
                 </p>
                 <ul class="back-features">
-                  <li>Chia cột văn bản chuẩn tạp chí in ấn</li>
-                  <li>Tối ưu độ tương phản văn bản theo chuẩn WCAG</li>
-                  <li>Trích dẫn drop-cap và blockquote nổi bật</li>
-                  <li>Anchor link điều hướng mục lục tự động</li>
+                  <li>Quản lý phòng (Room Management)</li>
+                  <li>Quản lý đặt phòng (Booking Management)</li>
+                  <li>Quản lý dịch vụ (Service Management)</li>
+                  <li>Quản lý thành viên (Membership)</li>
+                  <li>Lưu trữ dữ liệu bền vững</li>
                 </ul>
                 <div class="back-actions">
                   <a href="https://www.tiktok.com/@toshi1475/video/7639976554700852487" target="_blank" class="btn-card-link">Xem Demo</a>
@@ -721,9 +748,11 @@
     </div>
 
     <div class="footer-bottom">
-      <p>&copy; 2026 Trần Minh Khởi. Tất cả quyền được bảo lưu. Thiết kế và phát triển bằng HTML5 &amp; CSS3.</p>
+      <p>&copy; 2026 Trần Minh Khôi. Tất cả quyền được bảo lưu. Thiết kế và phát triển bằng HTML5 &amp; CSS3.</p>
     </div>
   </footer>
 
+  <!-- Tệp JavaScript xử lý chuyển đổi giao diện Dark/Light mode -->
+  <script src="script.js"></script>
 </body>
 </html>
