@@ -1,20 +1,4 @@
 /* ==========================================================================
-   PORTFOLIO CÁ NHÂN - TRẦN MINH KHỞI
-   Công nghệ: 100% Thuần HTML5 & CSS3 (Không dùng JS, không dùng Framework)
-   Mục lục:
-   1. CSS Variables & Reset chung
-   2. Selectors Nâng cao & Typography
-   3. Header & Sticky Navigation (Kỹ thuật CSS Checkbox Hack)
-   4. Hero Section (Gradient động, 2D Transform, Pulse Animation)
-   5. About Section (CSS Multiple Columns, Text Effects, Skew)
-   6. Skills Section (3D Transform Card, Inset Box-Shadow, Progress Bars)
-   7. Projects Section (3D Flip Card: preserve-3d & backface-visibility)
-   8. Contact Section (UI Pseudo-classes: :focus, :valid, :invalid, resize)
-   9. Footer & Back-to-top
-   10. Responsive Design (Media Queries)
-   ========================================================================== */
-
-/* ==========================================================================
    1. CSS VARIABLES & RESET CHUNG
    ========================================================================== */
 :root {
@@ -81,14 +65,15 @@ textarea {
 /* Cuộn trang mượt mà khi bấm anchor link */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 80px; /* Bù đắp chiều cao của sticky header */
+  scroll-padding-top: 80px;
+  /* Bù đắp chiều cao của sticky header */
 }
 
 body {
   font-family: var(--font-family);
   background-color: var(--bg-primary);
   /* Kỹ thuật: Multiple background layers kết hợp Radial và Linear Gradient */
-  background-image: 
+  background-image:
     radial-gradient(circle at 15% 20%, rgba(43, 108, 176, 0.10) 0%, transparent 40%),
     radial-gradient(circle at 85% 60%, rgba(26, 54, 93, 0.08) 0%, transparent 45%),
     linear-gradient(180deg, #f6f8fb 0%, #eef2f7 100%);
@@ -127,8 +112,13 @@ h1, h2, h3, h4, h5, h6,
 }
 
 @keyframes targetHighlight {
-  0% { filter: brightness(1.2); }
-  100% { filter: brightness(1); }
+  0% {
+    filter: brightness(1.2);
+  }
+
+  100% {
+    filter: brightness(1);
+  }
 }
 
 /* Header tiêu đề chung từng section */
@@ -241,11 +231,13 @@ ul {
       Khi #nav-toggle:checked ~ .nav-menu => hiển thị menu trên mobile!
    -------------------------------------------------- */
 .nav-toggle-checkbox {
-  display: none; /* Ẩn checkbox thật */
+  display: none;
+  /* Ẩn checkbox thật */
 }
 
 .nav-toggle-label {
-  display: none; /* Mặc định ẩn trên desktop, bật trên mobile */
+  display: none;
+  /* Mặc định ẩn trên desktop, bật trên mobile */
   cursor: pointer;
   width: 32px;
   height: 24px;
@@ -281,16 +273,17 @@ ul {
 }
 
 /* Biến hình icon Hamburger thành dấu X khi Checkbox được :checked */
-.nav-toggle-checkbox:checked + .nav-toggle-label .hamburger-line {
-  background-color: transparent; /* Ẩn thanh giữa */
+.nav-toggle-checkbox:checked+.nav-toggle-label .hamburger-line {
+  background-color: transparent;
+  /* Ẩn thanh giữa */
 }
 
-.nav-toggle-checkbox:checked + .nav-toggle-label .hamburger-line::before {
+.nav-toggle-checkbox:checked+.nav-toggle-label .hamburger-line::before {
   transform: translateY(8px) rotate(45deg);
   background-color: var(--accent-cyan);
 }
 
-.nav-toggle-checkbox:checked + .nav-toggle-label .hamburger-line::after {
+.nav-toggle-checkbox:checked+.nav-toggle-label .hamburger-line::after {
   transform: translateY(-8px) rotate(-45deg);
   background-color: var(--accent-cyan);
 }
@@ -376,8 +369,13 @@ ul {
 
 /* Animation nền gradient */
 @keyframes heroBgAnimation {
-  0% { background-position: 0% 50%; }
-  100% { background-position: 100% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 100% 50%;
+  }
 }
 
 .hero-container {
@@ -400,7 +398,7 @@ ul {
 .hero-badge {
   display: inline-block;
   padding: 6px 14px;
-  font-size: 0.85rem;
+  font-size: 1.5rem;
   font-weight: 600;
   color: var(--accent-cyan);
   background: rgba(91, 127, 146, 0.12);
@@ -413,8 +411,13 @@ ul {
 }
 
 @keyframes badgeBounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-4px); }
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
 }
 
 .hero-title {
@@ -523,6 +526,7 @@ ul {
     box-shadow: 0 0 20px rgba(91, 127, 146, 0.4), 0 0 40px rgba(124, 122, 158, 0.2);
     transform: scale(0.98);
   }
+
   100% {
     box-shadow: 0 0 35px rgba(91, 127, 146, 0.7), 0 0 60px rgba(169, 143, 174, 0.4);
     transform: scale(1.02);
@@ -689,12 +693,12 @@ ul {
 }
 
 /* Pseudo-class :first-of-type tạo điểm nhấn cho đoạn văn đầu tiên */
-.about-columns-text > p:first-of-type {
+.about-columns-text>p:first-of-type {
   color: var(--text-main);
   font-weight: 450;
 }
 
-.about-columns-text > p {
+.about-columns-text>p {
   margin-bottom: 16px;
 }
 
@@ -877,12 +881,29 @@ ul {
 }
 
 /* Độ dài % thuần CSS cho từng kỹ năng (không dùng JS) */
-.fill-html5 { width: 95%; }
-.fill-css3 { width: 90%; }
-.fill-responsive { width: 88%; }
-.fill-uiux { width: 82%; }
-.fill-git { width: 80%; }
-.fill-perf { width: 85%; }
+.fill-html5 {
+  width: 95%;
+}
+
+.fill-css3 {
+  width: 90%;
+}
+
+.fill-responsive {
+  width: 88%;
+}
+
+.fill-uiux {
+  width: 82%;
+}
+
+.fill-git {
+  width: 80%;
+}
+
+.fill-perf {
+  width: 85%;
+}
 
 /* ==========================================================================
    7. PROJECTS SECTION (3D FLIP CARD HOVER EFFECT THUẦN CSS)
@@ -909,7 +930,8 @@ ul {
 .flip-card-container {
   background-color: transparent;
   height: 440px;
-  perspective: 1200px; /* Độ sâu phối cảnh 3D */
+  perspective: 1200px;
+  /* Độ sâu phối cảnh 3D */
 }
 
 .flip-card-inner {
@@ -917,7 +939,8 @@ ul {
   width: 100%;
   height: 100%;
   text-align: left;
-  transform-style: preserve-3d; /* Giữ không gian 3D cho các con */
+  transform-style: preserve-3d;
+  /* Giữ không gian 3D cho các con */
   transition: transform var(--transition-slow);
   border-radius: 20px;
   box-shadow: var(--shadow-sm);
@@ -937,8 +960,10 @@ ul {
   left: 0;
   width: 100%;
   height: 100%;
-  -webkit-backface-visibility: hidden; /* Trình duyệt Safari */
-  backface-visibility: hidden; /* Ẩn mặt sau khi nhìn từ đằng trước */
+  -webkit-backface-visibility: hidden;
+  /* Trình duyệt Safari */
+  backface-visibility: hidden;
+  /* Ẩn mặt sau khi nhìn từ đằng trước */
   border-radius: 20px;
   border: 1px solid var(--border-card);
   overflow: hidden;
@@ -981,10 +1006,21 @@ ul {
   font-size: 0.95rem;
 }
 
-.p1-bg { background: linear-gradient(135deg, #8aa8b8, #7c7a9e); }
-.p2-bg { background: linear-gradient(135deg, #c99bab, #a98fae); }
-.p3-bg { background: linear-gradient(135deg, #7fa387, #6f96a8); }
-.p4-bg { background: linear-gradient(135deg, #d7b88a, #c17b6f); }
+.p1-bg {
+  background: linear-gradient(135deg, #8aa8b8, #7c7a9e);
+}
+
+.p2-bg {
+  background: linear-gradient(135deg, #c99bab, #a98fae);
+}
+
+.p3-bg {
+  background: linear-gradient(135deg, #7fa387, #6f96a8);
+}
+
+.p4-bg {
+  background: linear-gradient(135deg, #d7b88a, #c17b6f);
+}
 
 .project-category-badge {
   position: absolute;
@@ -1050,7 +1086,8 @@ ul {
 .flip-card-back {
   background: linear-gradient(145deg, #eef2f8 0%, #e2e9f3 100%);
   padding: 30px;
-  transform: rotateY(180deg); /* Lật ngược 180 độ sẵn để khi hover quay về mặt trước */
+  transform: rotateY(180deg);
+  /* Lật ngược 180 độ sẵn để khi hover quay về mặt trước */
   justify-content: center;
   border-color: rgba(124, 122, 158, 0.4);
 }
@@ -1278,7 +1315,8 @@ ul {
   background-color: var(--bg-input);
   border: 1.5px solid var(--border-subtle);
   border-radius: 12px;
-  outline: none; /* Tùy biến outline bằng CSS thuần */
+  outline: none;
+  /* Tùy biến outline bằng CSS thuần */
   transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);
 }
 
@@ -1326,17 +1364,22 @@ ul {
   font-weight: 500;
 }
 
-.valid-text { color: var(--accent-green); }
-.invalid-text { color: var(--accent-red); }
+.valid-text {
+  color: var(--accent-green);
+}
+
+.invalid-text {
+  color: var(--accent-red);
+}
 
 /* Combinator Selector (+) để hiển thị thông báo validation */
-.form-input:required:valid ~ .valid-text,
-.form-textarea:required:valid ~ .valid-text {
+.form-input:required:valid~.valid-text,
+.form-textarea:required:valid~.valid-text {
   display: block;
 }
 
-.form-input:required:invalid:not(:placeholder-shown) ~ .invalid-text,
-.form-textarea:required:invalid:not(:placeholder-shown) ~ .invalid-text {
+.form-input:required:invalid:not(:placeholder-shown)~.invalid-text,
+.form-textarea:required:invalid:not(:placeholder-shown)~.invalid-text {
   display: block;
 }
 
@@ -1523,7 +1566,8 @@ ul {
 
   /* Kích hoạt Mobile Hamburger Menu bằng CSS Checkbox Hack */
   .nav-toggle-label {
-    display: block; /* Hiển thị nút Hamburger */
+    display: block;
+    /* Hiển thị nút Hamburger */
   }
 
   .nav-menu {
@@ -1542,7 +1586,7 @@ ul {
   }
 
   /* Khi checkbox được :checked, xổ menu xuống */
-  .nav-toggle-checkbox:checked ~ .nav-menu {
+  .nav-toggle-checkbox:checked~.nav-menu {
     max-height: 380px;
     padding: 24px 0;
   }
@@ -1729,65 +1773,77 @@ ul {
 
 /* ==========================================================================
    BẢNG MÀU & ĐỊNH DẠNG DARK MODE (Áp dụng khi bật .dark-mode)
+   - Phong cách website tham khảo (Deep Black & Aurora Mesh Glow):
+     + Quầng sáng xanh lục góc trên bên trái
+     + Quầng sáng đỏ đô / rượu vang góc trên bên phải
+     + Quầng sáng xanh dương sâu ở giữa / dưới
+     + Thẻ card nền đen kính mờ với viền xanh mảnh phát sáng nhẹ
+     + Tiêu đề chữ trắng tinh sáng sắc nét
    ========================================================================== */
 :root.dark-mode,
 body.dark-mode {
-  --bg-primary: #0a0f1d;
-  --bg-secondary: #111827;
-  --bg-card: rgba(17, 24, 39, 0.88);
-  --bg-card-hover: rgba(24, 34, 53, 0.98);
-  --bg-input: #1a2333;
+  /* Bảng màu Dark Mode chuẩn phong cách website tham khảo */
+  --bg-primary: #030508;
+  --bg-secondary: #060a12;
+  --bg-card: rgba(8, 14, 26, 0.75);
+  --bg-card-hover: rgba(12, 20, 36, 0.9);
+  --bg-input: rgba(6, 10, 18, 0.85);
 
   --accent-cyan: #38bdf8;
   --accent-indigo: #60a5fa;
   --accent-purple: #818cf8;
   --accent-green: #34d399;
-  --accent-red: #f87171;
+  --accent-red: #ef4444;
 
-  --gradient-brand: linear-gradient(135deg, #38bdf8 0%, #60a5fa 50%, #818cf8 100%);
-  --gradient-card: linear-gradient(145deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 100%);
-  --gradient-btn: linear-gradient(135deg, #0284c7 0%, #2563eb 100%);
-  --gradient-btn-hover: linear-gradient(135deg, #38bdf8 0%, #3b82f6 100%);
+  /* Gradient chữ tiêu đề trắng sáng như chữ HELLO! trong ảnh tham khảo */
+  --gradient-brand: linear-gradient(135deg, #ffffff 0%, #f1f5f9 50%, #e2e8f0 100%);
+  --gradient-card: linear-gradient(145deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+  --gradient-btn: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  --gradient-btn-hover: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
 
-  --text-main: #f1f5f9;
+  /* Màu chữ: Trắng tinh cho tiêu đề chính, xám bạc sáng cho nội dung */
+  --text-main: #ffffff;
   --text-muted: #94a3b8;
   --text-dim: #64748b;
 
-  --border-subtle: rgba(255, 255, 255, 0.12);
+  --border-subtle: rgba(255, 255, 255, 0.1);
   --border-active: #38bdf8;
-  --border-card: rgba(56, 189, 248, 0.22);
+  --border-card: rgba(59, 130, 246, 0.32);
 
-  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
-  --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
-  --shadow-glow: 0 0 20px rgba(56, 189, 248, 0.28);
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 10px 30px -5px rgba(0, 0, 0, 0.7);
+  --shadow-glow: 0 0 25px rgba(56, 189, 248, 0.35);
   --shadow-glow-purple: 0 0 25px rgba(96, 165, 250, 0.35);
 }
 
 body.dark-mode {
-  background-color: var(--bg-primary);
-  background-image: 
-    radial-gradient(circle at 15% 20%, rgba(56, 189, 248, 0.09) 0%, transparent 40%),
-    radial-gradient(circle at 85% 60%, rgba(96, 165, 250, 0.07) 0%, transparent 45%),
-    linear-gradient(180deg, #070b14 0%, #0a0f1d 100%);
+  background-color: #030508;
+  /* Hiệu ứng nền đa sắc (Mesh Aurora Glow): Xanh lục góc trái, Đỏ đô góc phải, Xanh dương ở dưới */
+  background-image:
+    radial-gradient(circle at 10% 20%, rgba(16, 185, 129, 0.22) 0%, rgba(5, 150, 105, 0.1) 30%, transparent 55%),
+    radial-gradient(circle at 88% 22%, rgba(220, 38, 38, 0.28) 0%, rgba(153, 27, 27, 0.12) 32%, transparent 55%),
+    radial-gradient(circle at 35% 75%, rgba(37, 99, 235, 0.22) 0%, rgba(29, 78, 216, 0.08) 35%, transparent 60%),
+    linear-gradient(180deg, #030508 0%, #020306 50%, #010204 100%);
+  background-attachment: fixed;
   color: var(--text-main);
 }
 
 /* Nút Toggle khi ở Dark Mode: Thumb trượt sang vị trí Mặt trăng */
 body.dark-mode .theme-toggle-track {
-  background-color: rgba(30, 41, 59, 0.85);
-  border-color: rgba(56, 189, 248, 0.35);
+  background-color: rgba(8, 14, 26, 0.85);
+  border-color: rgba(59, 130, 246, 0.4);
 }
 
 body.dark-mode .theme-toggle-btn:hover .theme-toggle-track {
   border-color: var(--accent-cyan);
-  box-shadow: 0 0 14px rgba(56, 189, 248, 0.35);
+  box-shadow: 0 0 14px rgba(56, 189, 248, 0.4);
 }
 
 body.dark-mode .theme-toggle-thumb {
   transform: translateX(28px);
-  background-color: #1e293b;
+  background-color: #0f172a;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
-  border: 1px solid rgba(56, 189, 248, 0.4);
+  border: 1px solid rgba(59, 130, 246, 0.5);
 }
 
 body.dark-mode .theme-icon-sun {
@@ -1799,24 +1855,42 @@ body.dark-mode .theme-icon-sun {
 body.dark-mode .theme-icon-moon {
   opacity: 1;
   transform: scale(1);
-  filter: brightness(0) invert(1); /* Chuyển icon Mặt trăng thành màu trắng tinh sáng */
+  filter: brightness(0) invert(1);
+  /* Chuyển icon Mặt trăng thành màu trắng tinh sáng */
 }
 
 /* Chi tiết các khối giao diện khi ở Dark Mode */
 body.dark-mode .site-header {
-  background: rgba(10, 15, 29, 0.88);
-  border-bottom-color: var(--border-subtle);
+  background: rgba(3, 5, 8, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom-color: rgba(255, 255, 255, 0.08);
 }
 
 body.dark-mode .nav-menu {
-  background: rgba(17, 24, 39, 0.98);
+  background: rgba(5, 8, 14, 0.98);
   border-bottom-color: var(--border-card);
 }
 
+/* Nút Contact nổi bật nền trắng chữ đen kiểu viên thuốc như nút HOME trong ảnh */
 body.dark-mode .nav-btn-contact {
-  background: rgba(56, 189, 248, 0.15) !important;
-  border-color: rgba(56, 189, 248, 0.4) !important;
-  color: var(--accent-cyan) !important;
+  background: #ffffff !important;
+  border-color: #ffffff !important;
+  color: #0a0a0a !important;
+  font-weight: 700 !important;
+  box-shadow: 0 0 16px rgba(255, 255, 255, 0.25) !important;
+}
+
+body.dark-mode .nav-btn-contact:hover {
+  background: #e2e8f0 !important;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4) !important;
+}
+
+/* Khung avatar ảnh đại diện phối nền đỏ thẫm và phát sáng đỏ như ảnh tham khảo */
+body.dark-mode .avatar-glow-ring {
+  border-color: rgba(220, 38, 38, 0.5);
+  box-shadow: 0 0 35px rgba(220, 38, 38, 0.4), 0 0 70px rgba(185, 28, 28, 0.2);
+  background: #200505;
 }
 
 body.dark-mode .avatar-placeholder,
@@ -1826,49 +1900,66 @@ body.dark-mode .image-placeholder {
 }
 
 body.dark-mode .about-badge-exp {
-  background: rgba(17, 24, 39, 0.95);
-  border-color: var(--accent-cyan);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  background: rgba(8, 14, 26, 0.9);
+  border-color: rgba(59, 130, 246, 0.4);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
 }
 
 /* Mặt sau của 3D Card chuyển sang màu tối ở Dark Mode */
 body.dark-mode .flip-card-back {
-  background: linear-gradient(145deg, #111827 0%, #1f2937 100%);
+  background: linear-gradient(145deg, #090f1d 0%, #04070e 100%);
   border-color: var(--border-card);
 }
 
+body.dark-mode .form-input,
+body.dark-mode .form-textarea {
+  background-color: rgba(6, 10, 18, 0.85);
+  border-color: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+}
 
 body.dark-mode .form-input:focus,
 body.dark-mode .form-textarea:focus {
-  background-color: #1a2333;
+  background-color: rgba(10, 16, 28, 0.95);
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.25);
 }
 
 body.dark-mode .btn-back-top {
-  background: rgb(110, 109, 109);
-  color: white;
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 body.dark-mode .btn-back-top:hover {
-  background: var(--gradient-btn);
-  color: black;
+  background: #ffffff;
+  color: #000000;
+  font-weight: 700;
+  box-shadow: 0 0 16px rgba(255, 255, 255, 0.35);
+}
+
+body.dark-mode footer.site-footer,
+body.dark-mode footer {
+  background-color: rgba(2, 4, 7, 0.95);
 }
 
 body.dark-mode .footer-bottom {
   border-top-color: rgba(255, 255, 255, 0.08);
 }
 
-body.dark-mode footer{
-  background-color: rgba(255, 255, 255, 0.04);
-}
-
 /* Đảm bảo menu mobile đủ chiều cao và căn giữa nút toggle */
 @media screen and (max-width: 768px) {
-  .nav-toggle-checkbox:checked ~ .nav-menu {
+  .nav-toggle-checkbox:checked~.nav-menu {
     max-height: 440px;
   }
-  
+
   .nav-theme-item {
     justify-content: center;
     padding-bottom: 4px;
   }
+}
+
+body.dark-mode .logo-accent{
+  background-color: red;
+  background-image: none;     
 }
