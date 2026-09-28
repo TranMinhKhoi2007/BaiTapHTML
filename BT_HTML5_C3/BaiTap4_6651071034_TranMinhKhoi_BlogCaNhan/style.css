@@ -8,6 +8,9 @@
   --bg-card: rgba(255, 255, 255, 0.9);
   --bg-card-hover: rgba(255, 255, 255, 1);
   --bg-input: #eef2f7;
+  --logo-accent: var(--gradient-brand);
+  --flip-card-back: linear-gradient(145deg, #eef2f8 0%, #e2e9f3 100%);
+  --logo-name: var(--text-main);
 
   /* Màu chủ đạo & Gradient: tông xanh navy - xanh dương học thuật, điềm đạm, chuyên nghiệp */
   --accent-cyan: #2c5282;
@@ -211,6 +214,8 @@ ul {
   transition: transform var(--transition-fast);
   display: inline-flex;
   align-items: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .logo:hover {
@@ -218,7 +223,17 @@ ul {
 }
 
 .logo-accent {
-  background: var(--gradient-brand);
+  background: var(--logo-accent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  transform: translateY(-1.5px);
+}
+
+.logo-name {
+  background: var(--logo-name);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1084,7 +1099,7 @@ ul {
 
 /* --- MẶT SAU (BACK) --- */
 .flip-card-back {
-  background: linear-gradient(145deg, #eef2f8 0%, #e2e9f3 100%);
+  background: var(--flip-card-back);
   padding: 30px;
   transform: rotateY(180deg);
   /* Lật ngược 180 độ sẵn để khi hover quay về mặt trước */
@@ -1788,6 +1803,9 @@ body.dark-mode {
   --bg-card: rgba(8, 14, 26, 0.75);
   --bg-card-hover: rgba(12, 20, 36, 0.9);
   --bg-input: rgba(6, 10, 18, 0.85);
+  --logo-accent: linear-gradient(135deg, #38bdf8 0%, #60a5fa 100%);
+  --flip-card-back: linear-gradient(145deg, #090f1d 0%, #04070e 100%);
+  --logo-name: linear-gradient(135deg, #39f286 0%, #008bfd 100%);
 
   --accent-cyan: #38bdf8;
   --accent-indigo: #60a5fa;
@@ -1905,12 +1923,6 @@ body.dark-mode .about-badge-exp {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
 }
 
-/* Mặt sau của 3D Card chuyển sang màu tối ở Dark Mode */
-body.dark-mode .flip-card-back {
-  background: linear-gradient(145deg, #090f1d 0%, #04070e 100%);
-  border-color: var(--border-card);
-}
-
 body.dark-mode .form-input,
 body.dark-mode .form-textarea {
   background-color: rgba(6, 10, 18, 0.85);
@@ -1957,9 +1969,4 @@ body.dark-mode .footer-bottom {
     justify-content: center;
     padding-bottom: 4px;
   }
-}
-
-body.dark-mode .logo-accent{
-  background-color: red;
-  background-image: none;     
 }
