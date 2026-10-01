@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <form method="post">
+            <table border="3" style="border-collapse: collapse;background-color: orange;">
+                <tr>
+                    <td>
+                        <label for="salary">Lương</label>
+                    </td>
+                    <td>
+                        <input type="number" id="salary">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="he-soLuong">Hệ số lương</label>
+                    </td>
+                    <td>
+                        <input type="number" id="he-soLuong">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"> 
+                        <button type="button"
+                            onclick="tinhLuong()" style="border-radius: 20px;">Tính lương
+                            tháng</button></td>
+                </tr>
+                <tr>
+                    <td>Lương tháng: </td>
+                    <td id="res"></td>
+                </tr>
+            </table>
+        </form>
+        <script src="cau23.js"></script>
+    </body>
+</html>

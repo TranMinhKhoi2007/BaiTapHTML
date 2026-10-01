@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post">
+        <table style="background-color: green; border-collapse: collapse;" border="2">
+            <tr>
+                <td colspan="3" align="center"><h1>Thực đơn</h1></td>
+            </tr>
+            <tr style="color: blue; font-weight: bold;">
+                <td>Thức ăn</td>
+                <td>Nước uống</td>
+                <td>Thời điểm</td>
+            </tr>
+            <tr>
+                <td>
+                    <select id="thuc-an" multiple>
+                        <option>Bún bò</option>
+                        <option>Hủ tiếu</option>
+                        <option>Phở bò</option>
+                        <option>Nuôi</option>
+                        <option>Bánh canh thịt</option>
+                        <option>Bánh cuốn</option>
+                    </select>
+                </td>
+
+                <td>
+                    <select id="thuc-uong" multiple>
+                        <option>Cà phê đá</option>
+                        <option>Cà phê sữa</option>
+                        <option>Chanh dây</option>
+                        <option>Chanh muối</option>
+                        <option>Xí muội</option>
+                        <option>Sữa tươi</option>
+                        <option>Cam vắt</option>
+                    </select>
+                </td>
+                
+                <td>
+                    <input type="radio" name="thời điểm" id="ban-ngay" value="Ban ngày" required>
+                    <label for="ban-ngay">Ban ngày</label>
+                    <br>
+                    <input type="radio" name="thời điểm" id="ban-dem" value="Ban đêm" required>
+                    <label for="ban-dem">Ban đêm</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" align="center"><button type="button" onclick="tinhTien()">Tính tiền</button></td>
+            </tr>
+
+            <tr>
+                <td id="output-table" colspan="3" align="center"></td>
+            </tr>
+        </table>
+    </form>
+    <script src="cau25.js"></script>
+</body>
+</html>

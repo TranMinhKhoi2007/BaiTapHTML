@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post">
+        <table border="3" style="border-collapse: collapse; background-color: pink;">
+            <tr>
+                <td>
+                    <label for="day">Ngày </label>
+                    <input type="number" id="day">
+                </td>
+                <td>
+                    <label for="month">Tháng: </label>
+                    <select name="month" id="month">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                </td>
+                <td>
+                    <label for="year">Năm </label>
+                    <input type="number" id="year">
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="3" align="center"><button type="button" onclick="xuatThu()" style="border-radius: 20px;">Xuất thứ</button></td>
+            </tr>
+            
+            <tr>
+                <td colspan="3" align="center" id="res"></td>
+            </tr>
+        </table>
+    </form>
+    <script src="cau24.js"></script>
+</body>
+</html>
